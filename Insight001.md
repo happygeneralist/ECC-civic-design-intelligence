@@ -1,10 +1,10 @@
 # Insight title
-Parents feel unsupported managing children’s control-seeking behaviours triggered by external stress.
+Parents need support in helping their child regulate emotions and regain a sense of safety.
 
 ---
 
 ### Summary
-A parent describes their child’s growing need for control at home as external environments (school, peers, daily routines) become more overwhelming. The family feels unequipped to manage this behaviour and perceives little support from school or services.
+A parent describes their child’s growing need for control at home as external environments become increasingly stressful and unpredictable. The behaviour is not defiance but an attempt to restore control when feeling unsafe. Parents feel unequipped to respond and unsupported by schools or services.
 
 ---
 
@@ -15,15 +15,15 @@ A parent describes their child’s growing need for control at home as external 
 
 ### Tags
 - **User group:** Parent / Child with SEND  
-- **User need:** Understand and manage behaviour changes effectively  
-- **Pain point:** Lack of guidance or coordinated support from school or professionals  
-- **Behaviour:** Seeks control in home environment as coping mechanism  
-- **Journey part:** Daily life / Ongoing support  
-- **Theme:** Emotional regulation · Support gaps · Family stress  
+- **Context:** Stress and unpredictability in school and social settings  
+- **Impact:** Emotional dysregulation at home; escalating family stress  
+- **Need:** Guidance and tools to support emotional regulation, not just behaviour management  
+- **Journey part:** Ongoing support / Family–school interface  
+- **Theme:** Emotional safety · Regulation · Coordination gap  
 
 ---
 
 ### Source
 - **Dataset / method:** Parent interview  
 - **Date:** Assumed 2024  
-- **Confidence:** Medium (single participant, rich qualitative insight)
+- **Confidence:** Medium (qualitative)
