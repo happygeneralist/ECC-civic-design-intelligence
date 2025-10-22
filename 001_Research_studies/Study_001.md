@@ -1,54 +1,78 @@
 ---
 type: research_study
 id: RS_001
-title: Parent Interviews – Emotional Regulation and Home Support
-date_range: 2024-03 to 2024-05
-research_lead: [Your Name or Team]
+title: SEND survey
+research_lead:
+  - Your Name
+date_range: 2024-03 – 2024-05
 method: Semi-structured interviews
 participants: 10 parents of children with SEND (ages 5–11)
 setting: In-home interviews, South London
 status: Completed
 confidence: High
-related_themes: [Emotional regulation, Family stress, Coordination gap]
-related_insights: [INS_001, INS_005, INS_007]
-related_needs: [NEED_001]
-tags: [parent, send, qualitative, emotional_regulation, home_environment]
+related_evidence:
+  - EVID_001
+  - EVID_002
+  - EVID_003
+related_insights:
+  - INS_001
+  - INS_002
+tags:
+  - send
+  - parent
+  - qualitative
+  - emotional_regulation
 ---
+# SEND Survey
 
-## Research Purpose
-Describe the **intent** of the study in one or two sentences.  
-> To understand how parents experience and respond to emotional regulation challenges at home, and how support from schools and services influences this.
+### Purpose
+> Explain **why this research was done**.  
+> What question or problem were you trying to understand?  
+> Example: “To understand how parents experience and respond to emotional regulation challenges at home.”
 
----
+### Research questions
+> List the **specific questions** this study explored.  
+> Example:
+> - How do parents describe their child’s regulation challenges?  
+> - What strategies do families use to manage them?
 
-## Research Questions
-- How do parents describe their child’s regulation challenges at home?  
-- What support do they currently receive from schools or services?  
-- What strategies or coping mechanisms do families use?  
+### Method summary
+> Outline how the research was carried out.  
+> Include:
+> - **Approach:** e.g. semi-structured interviews, survey  
+> - **Recruitment:** where participants came from  
+> - **Sample:** how many and who  
+> - **Data collected:** e.g. transcripts, survey responses  
+> - **Analysis approach:** e.g. thematic coding, grounded analysis
 
----
+### Key findings
+> Summarise the **main findings or patterns** from this study (3–5 bullets max).  
+> Example:
+> 1. Parents feel unsupported in managing regulation.  
+> 2. Emotional stress often stems from inconsistent school support.
 
-## Methods
-| Aspect | Details |
-|---------|----------|
-| **Approach** | Semi-structured interviews (45–60 min) |
-| **Recruitment** | Through local SEND parent network |
-| **Sample** | 10 parents, diverse school types |
-| **Data collected** | Audio recordings, transcripts, observation notes |
-| **Analysis approach** | Thematic coding in Obsidian using tags (#regulation, #support_gap) |
+### Illustrative quotes
+> Add 1–3 powerful quotes that bring the findings to life.  
+> Example:
+> > “We haven’t had any help from school.”  
+> > “Her stress builds up all day and explodes when she gets home.”
 
----
+### Next steps
+> Describe what will happen next.  
+> Example:
+> - Combine findings with professional interviews.  
+> - Validate with service providers or additional survey data.
 
-## 🧠 Key Findings (Summary)
-1. Children’s control-seeking behaviours at home are linked to stress from external environments.  
-2. Parents feel isolated and unsupported by schools in managing regulation.  
-3. Emotional safety and predictability are central to managing regulation.  
-4. Parents improvise strategies, but lack consistent frameworks or language.  
 
----
+#### Evidence
+LIST FROM "002_Evidence" WHERE source_study = this.file.link
 
-## 💬 Illustrative Quotes
-> “There is more and more outside the house that she can't control so she is trying to control more and more in the house.”  
-> “School just tells us to be consistent, but they aren’t consistent with her.”
+#### Insights
+LIST FROM "005_Insights" WHERE any(related_evidence, ev => ev.source_study = this.file.link)
 
-*(Link each quote to*
+#### User needs
+LIST FROM "003_User_Needs" WHERE any(related_evidence, ev => ev.source_study = this.file.link)
+
+#### Pain points
+LIST FROM "006_Pain_Points" WHERE any(related_evidence, ev => ev.source_study = this.file.link)
+

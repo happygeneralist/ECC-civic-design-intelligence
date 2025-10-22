@@ -1,4 +1,4 @@
-# Research repository: guide for user researchers
+   # Research repository: guide for user researchers
 
 Welcome to your research repository. 
 
@@ -12,7 +12,7 @@ This wastes money and forces teams to rediscover the same problems.
 The repository helps by providing a shared space to:
 
 - **Collect evidence once and reuse it.** Store quotes, observations, and survey results as individual notes so they can support multiple projects.  
-- **Make user needs visible.** Write needs as action statements, such as “Parents need clear, trustworthy guidance to plan SEND transitions.”  
+- **Make user needs visible.** Write needs as action statements.
 - **Link insights to their sources.** Each insight links to the studies and evidence that support it, helping teams base decisions on real data.  
 - **Support dignity in design.** Connect user needs with civic obligations and capabilities so teams consider whether services uphold people’s rights.  
 - **Reduce duplication.** Before starting new research, check what already exists. Build on it instead of repeating work.
@@ -49,7 +49,7 @@ The repository is organised into folders. Each folder contains one type of note.
 
 Add and connect research in six steps:
 
-1. **Create a study** – Add a summary in `001_Studies/` with title, dates, method, participants, and purpose.
+1. **Create a study** – Add a summary in `001_Research_studies/` with title, dates, method, participants, and purpose.
 2. **Capture evidence** – Record anonymised quotes or observations in `002_Evidence/` using the template provided.
 3. **Note pain points and behaviours** – Describe barriers and observable actions in their respective folders.
 4. **Write user needs** – Use clear action statements (for example, “Parents need clear, trustworthy guidance to plan SEND transitions”).

@@ -6,6 +6,7 @@
       {
         "id": "09213ca21edc891b",
         "type": "tabs",
+        "dimension": 49.43310657596372,
         "children": [
           {
             "id": "321111b3a783e626",
@@ -13,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Readme.md",
+                "file": "004_Behaviours/BEH_001.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Readme"
+              "title": "BEH_001"
             }
           }
         ]
@@ -26,6 +27,7 @@
       {
         "id": "c8bc090caa174b21",
         "type": "tabs",
+        "dimension": 50.56689342403629,
         "children": [
           {
             "id": "3c8432ca7408c1fa",
@@ -110,6 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "004_Behaviours/BEH_001.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +122,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for BEH_001"
             }
           },
           {
@@ -128,11 +131,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "004_Behaviours/BEH_001.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from BEH_001"
             }
           },
           {
@@ -156,12 +160,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "004_Behaviours/BEH_001.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of BEH_001"
             }
           }
         ]
@@ -181,36 +186,41 @@
       "graph:Open graph view": false
     }
   },
-  "active": "3c8432ca7408c1fa",
+  "active": "321111b3a783e626",
   "lastOpenFiles": [
+    "004_Behaviours/BEH_002.md",
+    "004_Behaviours/BEH_001.md",
+    "002_Evidence/Quote_001.md",
+    "002_Evidence/Quote_002.md",
+    "003_User_needs/UN_001.md",
+    "006_Insights/Insight001.md",
+    "Templates/Insight_template.md",
+    "006_Insights/Regulation management.md",
+    "001_Research_studies/Study_001.md",
+    "001_Research_studies/Study_002.md",
+    "Templates/Behaviour_template.md",
+    "002_Evidence/Quote001.md",
+    "Templates/Evidence_template.md",
+    "003_User_needs/UN001.md",
+    "Templates/User_need_template.md",
+    "003_User_needs/UN002.md",
+    "003_User_needs/Untitled 3.md",
+    "Templates/Study_template.md",
     "Readme.md",
+    "Templates/Pain_point_template.md",
     "docs/Governance_legal_basis.md",
     "docs/Compliance_checklist.md",
     "docs/Researcher_input_checklist.md",
     "docs",
-    "Templates/Study_template.md",
-    "Templates/Evidence_template.md",
-    "Templates/Behaviour_template.md",
-    "Templates/Insight_template.md",
-    "Templates/Pain_point_template.md",
     "Templates/Theme_template.md",
-    "Templates/User_need_template.md",
     "Templates/Insight template.md",
     "Templates/User_needs_template.md",
-    "001_Research_studies/Study_001.md",
-    "Templates/User need Template.md",
-    "Templates/Evidence template.md",
     "005_Pain_point",
-    "002_Evidence/Quote001.md",
-    "003_User_needs/UN001.md",
     "008_Personas",
     "007_Themes",
     "Templates",
-    "006_Insights/Insight001.md",
     "009_Journeys",
     "004_Behaviours",
-    "Untitled.md",
-    "001_Research_studies",
-    "Welcome.md"
+    "001_Research_studies"
   ]
 }
