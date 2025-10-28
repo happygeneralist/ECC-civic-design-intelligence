@@ -5,7 +5,7 @@ title: Focus groups
 research_lead: Claire Craig
 date_range: 2024-11
 method: Semi structured online focus groups
-participants: One group of young people (age 12-22), three groups of parents
+participants: One group of young people (age 12-22), three groups of parents of young people being educated in different settings
 setting: Online groups, Essex
 status: Completed
 confidence: High
@@ -17,22 +17,23 @@ tags: [send, parents, young people, qualitative]
 # Focus Groups
 
 ### Purpose
-To understand barriers to successful outcomes for young people with SEND
+To understand barriers to successful outcomes for young people with SEND, and to see if this differed across educational settings (electively home educated, specialist schools, mainstream).
 
 ### Research questions
 What are the barriers to successful outcomes for young people with SEND? 
+Does this differ by educational setting?
 How do parents and young people navigate decision-making about their future options?
-What role do professionals play in helping young people with SEND make decisions?
+
 
 ### Method summary
-- **Approach:** Semi-structured interviews (60 mins)
-- **Recruitment:** Through established networks  
-- **Sample:** 12 employees from the Local Authority, colleges, charities
+- **Approach:** Semi-structured focus groups (60 mins)
+- **Recruitment:** Young people were recruited through the MultiSchools Council. Parents were recruited through research panel set up through newsletters, social media and SEND networks.
+- **Sample:** 7 young people, 13 parents
 - **Data collected:** video recordings, transcripts, observation notes  
 - **Analysis approach:** Thematic coding  
 
 ### Key findings
-1. Professionals working with young people with SEND have to curate information for them and their families.
-2. Professionals identify a lack of options for young people beyond 16.
-3. There is a lack of support for young people with moderate special needs, especially when they don't have an EHCP.
- 
+1.	Young people with SEND in mainstream school are struggling significantly with their mental health, and this is having a debilitating effect on their ability to plan for the future.
+2.	Parents often feel overwhelmed and unsupported.
+3.	There is a sense that information about options is found by chance through random connections.
+
