@@ -4,18 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "09213ca21edc891b",
+        "id": "547f6310dfcdbe10",
         "type": "tabs",
-        "dimension": 99.99999999999999,
         "children": [
           {
-            "id": "321111b3a783e626",
+            "id": "5466f1709cb3cb33",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "002_Evidence/Quote_003.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Quote_003"
+            }
+          },
+          {
+            "id": "18aa7d39545a7e33",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.14"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.14"
             }
           }
         ]
@@ -75,7 +90,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 335.5
   },
   "right": {
     "id": "900729611035f934",
@@ -91,6 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "003_User_needs/UN_001.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +116,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for UN_001"
             }
           },
           {
@@ -109,11 +125,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "003_User_needs/UN_001.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from UN_001"
             }
           },
           {
@@ -137,12 +154,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "003_User_needs/UN_001.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of UN_001"
             }
           }
         ]
@@ -154,6 +172,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
@@ -162,35 +181,35 @@
       "graph:Open graph view": false
     }
   },
-  "active": "321111b3a783e626",
+  "active": "5466f1709cb3cb33",
   "lastOpenFiles": [
-    "009_Journeys/Pathway_planning.md",
-    "008_Personas/Persona.md",
+    "002_Evidence/Quote_002.md",
     "002_Evidence/Quote_001.md",
+    "001_Research_studies/S001_survey.md",
+    "001_Research_studies/S002_parent_interviews.md",
+    "001_Research_studies/S003_case_studies.md",
+    "001_Research_studies/S004_professionals_interviews.md",
+    "001_Research_studies/S005_focus_groups.md",
+    "001_Research_studies/S006_in-school_workshops.md",
+    "003_User_needs/UN_001.md",
+    "001_Research_studies/S002_parent_ints.md",
+    "001_Research_studies/Study_003.md",
+    "docs/Governance_legal_basis.md",
+    "008_Personas/Persona.md",
+    "001_Research_studies/Study_001.md",
+    "009_Journeys/Pathway_planning.md",
+    "004_Behaviours/BEH_001.md",
     "006_Insights/Insight_001.md",
+    "005_Pain_point/Pain_point_template 1.md",
+    "001_Research_studies/Study_002.md",
     "006_Insights/Regulation management.md",
     "Templates/Insight_template.md",
     "006_Insights/Insight001.md",
     "Templates/Behaviour_template.md",
     "002_Evidence/Quote_003.md",
-    "002_Evidence/Quote_002.md",
-    "004_Behaviours/BEH_001.md",
     "002_Evidence/Quotes",
     "Templates/Evidence_template.md",
     "Templates/Pain_point_template.md",
-    "003_User_needs/UN_001.md",
-    "001_Research_studies/Study_001.md",
-    "Templates/Study_template.md",
-    "007_Themes/Theme_template 1.md",
-    "Templates/Theme_template.md",
-    "005_Pain_point/Pain_point_template 1.md",
-    "004_Behaviours/BEH_002.md",
-    "001_Research_studies/Study_002.md",
-    "002_Evidence/Quote001.md",
-    "003_User_needs/UN001.md",
-    "Templates/User_need_template.md",
-    "003_User_needs/UN002.md",
-    "003_User_needs/Untitled 3.md",
     "docs",
     "005_Pain_point",
     "008_Personas",

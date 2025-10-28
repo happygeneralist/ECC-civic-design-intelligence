@@ -6,12 +6,16 @@ research_lead: Claire Craig
 date_range: 2024-11
 method: Group discussions and creative activity
 participants: One group of young people (age 12-22), three groups of parents of young people being educated in different settings
-setting: Schools: Market Field, Castledon, Saffron Walden High School, Shorefield, Essex
+setting: Schools, Market Field, Castledon, Saffron Walden High School, Shorefield, Essex
 status: Completed
 confidence: High
-related_evidence: 
-related_insights: 
-tags: [send, schools, young people, qualitative]
+related_evidence:
+related_insights:
+tags:
+  - send
+  - schools
+  - young people
+  - qualitative
 ---
 
 # In-school workshops
