@@ -2,7 +2,7 @@
 type: research_study
 id: S003
 title: Case Studies
-research_lead: [Your Name]
+research_lead: [Claire Craig]
 date_range: 2024-03 – 2024-05
 method: Semi-structured in-depth interviews
 participants: 7 families of young people with SEND (ages 12-18)
