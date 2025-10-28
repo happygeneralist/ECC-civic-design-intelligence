@@ -2,7 +2,7 @@
 type: research_study
 id: S004
 title: Interviews with professionals
-research_lead: [Your Name]
+research_lead: Claire Craig
 date_range: 2024-03 – 2024-05
 method: Semi-structured in-depth interviews
 participants: 12 professionals who work with young people with SEND
@@ -14,7 +14,7 @@ related_insights:
 tags: [send, professionals, qualitative]
 ---
 
-# Case studies
+# Interviews with professionals
 
 ### Purpose
 To understand barriers to successful outcomes for young people with SEND
