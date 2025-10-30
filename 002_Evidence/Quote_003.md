@@ -3,9 +3,8 @@ type: evidence
 id: EVID_003
 source_study: "[[Study_001]]"
 actor: Parent
-context: 
+context:
 journey_stage: Use
-confidence: Medium
 tags:
   - send
   - emotional_regulation

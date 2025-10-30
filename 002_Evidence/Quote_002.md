@@ -5,7 +5,6 @@ source_study: "[[Study_001]]"
 actor: Parent
 context: Home – evening routine
 journey_stage: Use
-confidence: Medium
 tags:
   - send
   - emotional_regulation

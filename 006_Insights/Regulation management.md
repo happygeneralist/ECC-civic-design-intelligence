@@ -1,7 +1,7 @@
 Parents need support in helping their child regulate emotions and regain a sense of safety, balancing home and school
 
 Evidence
-/Users/Sandy/Projects/ECC/Quote001.md
+/Users/Projects/ECC/Quote001.md
 
 User journey
 Breakdown at secondary school

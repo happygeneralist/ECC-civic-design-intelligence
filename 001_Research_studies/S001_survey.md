@@ -9,7 +9,6 @@ method: Semi-structured interviews
 participants: 10 parents of children with SEND (ages 5–11)
 setting: In-home interviews, South London
 status: Completed
-confidence: High
 related_evidence:
   - EVID_001
   - EVID_002
