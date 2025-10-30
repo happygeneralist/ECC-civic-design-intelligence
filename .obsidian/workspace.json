@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "002_Evidence/Quote_003.md",
+                "file": "003_User_needs/Anchor summaries.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Quote_003"
+              "title": "Anchor summaries"
             }
           },
           {
@@ -183,15 +183,17 @@
   },
   "active": "5466f1709cb3cb33",
   "lastOpenFiles": [
-    "002_Evidence/Quote_002.md",
-    "002_Evidence/Quote_001.md",
+    "003_User_needs/UN_001.md",
+    "003_User_needs/Anchor summaries.md",
+    "001_Research_studies/S006_in-school_workshops.md",
     "001_Research_studies/S001_survey.md",
     "001_Research_studies/S002_parent_interviews.md",
     "001_Research_studies/S003_case_studies.md",
     "001_Research_studies/S004_professionals_interviews.md",
     "001_Research_studies/S005_focus_groups.md",
-    "001_Research_studies/S006_in-school_workshops.md",
-    "003_User_needs/UN_001.md",
+    "002_Evidence/Quote_003.md",
+    "002_Evidence/Quote_002.md",
+    "002_Evidence/Quote_001.md",
     "001_Research_studies/S002_parent_ints.md",
     "001_Research_studies/Study_003.md",
     "docs/Governance_legal_basis.md",
@@ -206,10 +208,8 @@
     "Templates/Insight_template.md",
     "006_Insights/Insight001.md",
     "Templates/Behaviour_template.md",
-    "002_Evidence/Quote_003.md",
     "002_Evidence/Quotes",
     "Templates/Evidence_template.md",
-    "Templates/Pain_point_template.md",
     "docs",
     "005_Pain_point",
     "008_Personas",
