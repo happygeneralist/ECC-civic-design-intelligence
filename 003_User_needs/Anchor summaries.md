@@ -1,12 +1,12 @@
 ## **Young People (YP) with SEND – Needs**
 
-  These are possible user needs rapidly analysed by custom LLM. These should all be treated as assumptions but can help guide the insights as primary research fills in the gaps.
+> These have been summarised with the help of [Gov User Needs LLM](https://chatgpt.com/g/g-673f960b95b48191802b8036a6bdc3a8-gov-user-needs) and should be **handled as assumptions until fully anchored to the research**.
 
 ### Identity & Confidence
 
 - I need to feel like I have a future.
 - I need to believe I am capable and valued.
-- I need others to see my potential, not just my challenges.
+- I need others to see my potential, not just my challenge s.
 - I need to know that I can work or contribute meaningfully.
 - I need to be supported to explore what I’m good at.
 - I need to feel safe and confident to try new things.
