@@ -8,7 +8,9 @@ Validation gives contributors a test-driven way to clean up the repository.
 
 Instead of manually guessing whether the repo is consistent, run the validator and make changes until the checks pass.
 
-The first validation layer focuses on:
+The default validation layer focuses on real repository content notes, not templates, documentation examples or migration scaffolds.
+
+It checks:
 
 - YAML frontmatter presence
 - required fields on structured notes
@@ -47,6 +49,51 @@ The validator should therefore protect against category errors such as:
 - weak traceability treated as strong evidence basis
 - review state hidden or misrepresented
 - wrong ID or type making an object hard to trace
+
+## Default validation scope
+
+By default, the validator checks research and problem-space content folders, including:
+
+- `001_Research_studies/`
+- `002_Evidence/`
+- `003_User_needs/`
+- `004_Behaviours/`
+- `005_Pain_point/`
+- `006_Insights/`
+- `007_Themes/`
+- `008_Personas/`
+- `009_Journeys/`
+
+By default, it skips:
+
+- `Templates/`
+- `000_Inbox/`
+- `docs/`
+- `migration/`
+
+This avoids treating template placeholders, documentation examples and audit scaffolds as real research notes.
+
+## Optional validation scopes
+
+To include templates:
+
+```bash
+python3 tools/validate_repository.py --include-templates
+```
+
+To include documentation, migration notes and inbox notes:
+
+```bash
+python3 tools/validate_repository.py --include-docs
+```
+
+To include both:
+
+```bash
+python3 tools/validate_repository.py --include-templates --include-docs
+```
+
+These flags are useful for separate quality checks, but they should not be used for the normal research-note migration baseline unless that is intentional.
 
 ## Three validation layers
 
