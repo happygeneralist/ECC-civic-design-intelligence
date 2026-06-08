@@ -43,6 +43,17 @@ If the material belongs to a distinct research activity, create or update a rese
 
 Use `Templates/Research_study_template.md`.
 
+If structured objects are created from an inbox note or source summary, preserve a trace back to the source.
+
+Use links such as:
+
+```yaml
+source_note: "[[000_Inbox/example_note]]"
+source_study: "[[RS_000]]"
+```
+
+If the object is not linked to specific quotes yet, source-level traceability is still useful.
+
 ### 3. Ask the LLM to structure the material
 
 Use the prompt patterns in `docs/LLM_research_breakdown_prompts.md`.
@@ -79,6 +90,10 @@ Use the relevant template:
 
 ### 5. Use honest default metadata
 
+Use `evidence_basis` as the primary indicator of whether an object is none, indicative, traceable, substantiated or validated.
+
+Use `evidence_strength` only as a secondary field while it remains in the schema.
+
 For LLM-created candidate objects without direct evidence links, use:
 
 ```yaml
@@ -106,6 +121,14 @@ llm_generated: true
 human_reviewed: false
 review_status: needs_review
 ```
+
+Do not use:
+
+```yaml
+evidence_basis: validated
+```
+
+unless a human reviewer has explicitly completed validation.
 
 ### 6. Do not force quote-linking up front
 
@@ -138,6 +161,19 @@ Deepening may include:
 - adding review notes
 - promoting status only when justified
 
+### 8. Resolve the inbox note
+
+After a first-pass breakdown, do not leave the inbox note in an ambiguous state.
+
+Choose one of these outcomes:
+
+- keep the inbox note as source context and link structured objects back to it
+- move useful objects into structured folders
+- archive or delete temporary LLM output that no longer has value
+- add a follow-up note explaining what still needs processing
+
+The inbox is a staging area, not a permanent store of unresolved analysis.
+
 ## User needs breakdown rules
 
 When creating user needs, follow:
@@ -155,6 +191,10 @@ In particular:
 - do not collapse experience, service, page and interaction needs
 - preserve emotional, social and civic meaning where relevant
 - record wording rationale when small wording changes would change the solution direction
+
+LLM-generated user needs are candidate formulations, not final wording.
+
+Do not treat a generated need as stable until it has been reviewed for wording, level, evidence basis and solution-vector risk.
 
 ## Evidence handling
 
@@ -198,10 +238,14 @@ After a first-pass breakdown, check:
 - [ ] Candidate objects are marked as candidate or assumption.
 - [ ] LLM-generated objects are marked as LLM-generated.
 - [ ] Evidence basis is not overstated.
+- [ ] No object is marked with `evidence_basis: validated` unless a human reviewer has explicitly validated it.
 - [ ] User needs are solution-agnostic.
+- [ ] LLM-generated user needs are treated as candidate formulations, not final wording.
 - [ ] Need levels are added where possible.
 - [ ] Important uncertainty is visible.
+- [ ] Structured objects preserve a trace back to the source note or study where possible.
 - [ ] Material needing later review is easy to find.
+- [ ] The inbox note has an explicit next state: retained as source context, moved into structured notes, archived/deleted, or marked for follow-up.
 
 ## Changelog guidance
 
