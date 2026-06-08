@@ -1,10 +1,23 @@
 ---
 type: evidence
 id: EVID_001
-source_study: "[[Study_001]]"
+source_study: "[[RS_002]]"
+evidence_kind: quote
 actor: Parent
 context: Home – evening routine
 journey_stage: Use
+status: captured
+analysis_state: captured
+confidence: low
+creation_mode: migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed
+related_behaviours:
+  - "[[BEH_001]]"
+  - "[[BEH_002]]"
+related_needs:
+  - "[[UN_001]]"
 tags:
   - send
   - emotional_regulation
@@ -18,5 +31,5 @@ tags:
 Example: Parent appears fatigued, child exhibits strong control behaviours when overwhelmed. %%
 
 ### Linked items
-- **Behaviours:** BEH_045 (Seeks control-restoring routines)  
-- **Needs:** NEED_010 (Enable co-regulation routines that restore emotional safety)
+- **Behaviours:** [[BEH_001]], [[BEH_002]]
+- **Needs:** [[UN_001]]
