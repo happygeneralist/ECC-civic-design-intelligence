@@ -15,8 +15,32 @@ Do not rename files or change IDs until the current links and references have be
 Use this sequence:
 
 ```text
-audit -> proposed mapping -> review -> migration PR -> validation
+validation baseline -> ID/link audit -> proposed mapping -> review -> migration PR -> validation rerun
 ```
+
+The validation baseline identifies current structural and governance failures before any migration changes are made.
+
+The ID/link audit then turns those failures into a reviewed mapping and migration plan.
+
+## Relationship to repository validation
+
+Use `tools/validate_repository.py` as the first pass for the audit.
+
+Run:
+
+```bash
+python3 tools/validate_repository.py
+```
+
+Record the results in:
+
+```text
+migration/validation-baseline-report.md
+```
+
+The baseline should not be treated as a migration. It is a snapshot of current repository health.
+
+Do not mechanically fix every warning. Classify findings first.
 
 ## Canonical ID prefixes
 
@@ -36,6 +60,7 @@ Use these prefixes for structured entity notes.
 | Opportunity | `OPP_` | `OPP_001` |
 | Review note | `REV_` | `REV_001` |
 | Claim | `CLM_` | `CLM_001` |
+| Value dimension | `VAL_` | `VAL_001` |
 
 ## What gets a canonical ID
 
@@ -63,9 +88,22 @@ related_pain_points
 related_insights
 outbound_wikilinks
 inbound_wikilinks
+validator_findings
 risk_level
 notes
 ```
+
+## Finding classification
+
+Classify validation findings before changing files.
+
+| Class | Meaning | Typical action |
+|---|---|---|
+| Structural error | Breaks schema, IDs, controlled values or lifecycle consistency | Fix in early migration batch |
+| Link integrity warning | Broken wikilink or relationship reference | Map before fixing |
+| Filename/ID warning | File name does not match canonical ID | Include in ID mapping |
+| Ambiguous object | Type, source or canonical status unclear | Human review before migration |
+| Acceptable immaturity | Candidate or assumption is incomplete but honestly labelled | Leave as-is for now |
 
 ## Risk levels
 
@@ -79,6 +117,7 @@ Use for notes where:
 - the filename is consistent
 - few or no other notes link to it
 - no relationship fields need updating
+- validator findings are low-risk or absent
 
 ### Medium risk
 
@@ -88,6 +127,7 @@ Use for notes where:
 - there are wikilinks to update
 - relationship fields point to an old name
 - aliases may be useful during transition
+- validator findings indicate missing or inconsistent metadata
 
 ### High risk
 
@@ -99,6 +139,7 @@ Use for notes where:
 - the note may be a duplicate
 - the evidence source is ambiguous
 - the change could affect validated or reviewed findings
+- validator findings suggest lifecycle or evidence-basis overclaiming
 
 ## Proposed mapping file
 
@@ -113,14 +154,14 @@ migration/id-normalisation-map.csv
 Suggested columns:
 
 ```text
-old_path,new_path,old_id,new_id,object_type,old_aliases,links_to_update,risk_level,notes
+old_path,new_path,old_id,new_id,object_type,old_aliases,links_to_update,validator_findings,risk_level,notes
 ```
 
 Example:
 
 ```csv
-old_path,new_path,old_id,new_id,object_type,old_aliases,links_to_update,risk_level,notes
-002_Evidence/Quote_001.md,002_Evidence/EVID_001.md,Quote_001,EVID_001,evidence,"Quote_001",true,medium,"Update links from [[Quote_001]] to [[EVID_001]]"
+old_path,new_path,old_id,new_id,object_type,old_aliases,links_to_update,validator_findings,risk_level,notes
+002_Evidence/Quote_001.md,002_Evidence/EVID_001.md,Quote_001,EVID_001,evidence,"Quote_001",true,"invalid ID prefix; unresolved source_study",medium,"Update links from [[Quote_001]] to [[EVID_001]] after confirming source study"
 ```
 
 ## Link update rules
@@ -164,7 +205,13 @@ Record the overall migration in `CHANGELOG.md`.
 
 ## Validation after migration
 
-After migration, check for:
+After migration, rerun:
+
+```bash
+python3 tools/validate_repository.py
+```
+
+Check for:
 
 - duplicate IDs
 - missing IDs on structured notes
@@ -184,3 +231,5 @@ Some files may be summaries, indexes, anchor notes, dashboards or working notes 
 Do not remove old aliases until the repository has stabilised after migration.
 
 Do not change research claims while performing ID normalisation.
+
+Do not upgrade immature or weakly evidenced objects just to make validation pass.
