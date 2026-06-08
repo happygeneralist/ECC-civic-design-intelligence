@@ -4,6 +4,8 @@ This file defines the common structure for notes in the research repository.
 
 The schema is intended to make the repository queryable, reviewable and safe to use with LLM-assisted workflows.
 
+Use `docs/Lifecycle_states.md` for guidance on valid combinations of `status`, `analysis_state` and `review_status`.
+
 ## General rules
 
 Every structured note should have YAML frontmatter.
