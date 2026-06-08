@@ -4,7 +4,7 @@ id: UN_000
 actor:
 journey_stage:
 need:
-need_level: capability | civic | experience | service | journey | task | page | interaction | content | solution_requirement
+need_level: capability | civic | experience | service | journey | task | page | interaction | content
 parent_needs:
 child_needs:
 related_capabilities:
@@ -77,13 +77,12 @@ Explain why this appears to be a need and how it relates to the actor, journey s
 - Related rights:
 - Related outcomes:
 
-## Related objects
+## Related problem-space objects
 
 - Behaviours:
 - Pain points:
 - Insights:
 - Value dimensions:
-- Solution options:
 
 ## What remains uncertain
 
