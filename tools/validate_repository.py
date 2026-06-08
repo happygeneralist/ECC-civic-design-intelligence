@@ -5,6 +5,10 @@ This script is intentionally lightweight and dependency-free. It checks Markdown
 files for frontmatter, canonical IDs, lifecycle values and basic link/reference
 integrity.
 
+By default it validates repository content notes and skips templates,
+documentation, migration notes and inbox notes. This keeps normal validation
+focused on real research objects rather than examples or scaffolding.
+
 Run from the repository root:
 
     python3 tools/validate_repository.py
@@ -43,6 +47,16 @@ STRUCTURED_DIRS = {
     "007_Themes",
     "008_Personas",
     "009_Journeys",
+}
+
+DOC_DIRS = {
+    "000_Inbox",
+    "docs",
+    "migration",
+}
+
+TEMPLATE_DIRS = {
+    "Templates",
 }
 
 TYPE_PREFIX = {
@@ -178,6 +192,7 @@ REQUIRED_BY_TYPE = {
 
 STRICT_TYPES = set(TYPE_PREFIX)
 
+
 @dataclass
 class Finding:
     severity: str
@@ -187,6 +202,7 @@ class Finding:
     def render(self) -> str:
         rel = self.path.relative_to(ROOT)
         return f"[{self.severity.upper()}] {rel}: {self.message}"
+
 
 @dataclass
 class Note:
@@ -259,7 +275,34 @@ def load_notes() -> List[Note]:
     return notes
 
 
-def is_structured_candidate(note: Note) -> bool:
+def top_level_dir(note: Note) -> str:
+    rel = note.path.relative_to(ROOT)
+    return rel.parts[0] if rel.parts else ""
+
+
+def is_template(note: Note) -> bool:
+    return top_level_dir(note) in TEMPLATE_DIRS
+
+
+def is_doc_or_scaffold(note: Note) -> bool:
+    return top_level_dir(note) in DOC_DIRS
+
+
+def is_default_scope(note: Note) -> bool:
+    return not is_template(note) and not is_doc_or_scaffold(note)
+
+
+def is_validation_scope(note: Note, include_templates: bool, include_docs: bool) -> bool:
+    if is_template(note) and not include_templates:
+        return False
+    if is_doc_or_scaffold(note) and not include_docs:
+        return False
+    return True
+
+
+def is_structured_candidate(note: Note, include_templates: bool = False, include_docs: bool = False) -> bool:
+    if not is_validation_scope(note, include_templates=include_templates, include_docs=include_docs):
+        return False
     rel = note.path.relative_to(ROOT)
     if rel.parts and rel.parts[0] in STRUCTURED_DIRS:
         return True
@@ -267,16 +310,9 @@ def is_structured_candidate(note: Note) -> bool:
     return note_type in STRICT_TYPES
 
 
-def is_template_or_doc(note: Note) -> bool:
-    rel = note.path.relative_to(ROOT)
-    return bool(rel.parts and rel.parts[0] in {"Templates", "docs", "migration"})
-
-
-def check_frontmatter(note: Note) -> List[Finding]:
+def check_frontmatter(note: Note, include_templates: bool, include_docs: bool) -> List[Finding]:
     findings: List[Finding] = []
-    if is_template_or_doc(note):
-        return findings
-    if is_structured_candidate(note) and not note.has_frontmatter:
+    if is_structured_candidate(note, include_templates=include_templates, include_docs=include_docs) and not note.has_frontmatter:
         findings.append(Finding("error", note.path, "structured note is missing YAML frontmatter"))
     return findings
 
@@ -288,9 +324,9 @@ def scalar(frontmatter: Dict[str, object], key: str) -> str:
     return str(value).strip()
 
 
-def check_required_fields(note: Note) -> List[Finding]:
+def check_required_fields(note: Note, include_templates: bool, include_docs: bool) -> List[Finding]:
     findings: List[Finding] = []
-    if not is_structured_candidate(note) or not note.has_frontmatter:
+    if not is_structured_candidate(note, include_templates=include_templates, include_docs=include_docs) or not note.has_frontmatter:
         return findings
     note_type = scalar(note.frontmatter, "type")
     required = set(REQUIRED_COMMON_FIELDS)
@@ -301,9 +337,9 @@ def check_required_fields(note: Note) -> List[Finding]:
     return findings
 
 
-def check_id(note: Note, id_index: Dict[str, List[Path]]) -> List[Finding]:
+def check_id(note: Note, id_index: Dict[str, List[Path]], include_templates: bool, include_docs: bool) -> List[Finding]:
     findings: List[Finding] = []
-    if not is_structured_candidate(note) or not note.has_frontmatter:
+    if not is_structured_candidate(note, include_templates=include_templates, include_docs=include_docs) or not note.has_frontmatter:
         return findings
     note_id = scalar(note.frontmatter, "id")
     note_type = scalar(note.frontmatter, "type")
@@ -324,9 +360,9 @@ def check_id(note: Note, id_index: Dict[str, List[Path]]) -> List[Finding]:
     return findings
 
 
-def check_controlled_values(note: Note) -> List[Finding]:
+def check_controlled_values(note: Note, include_templates: bool, include_docs: bool) -> List[Finding]:
     findings: List[Finding] = []
-    if not note.has_frontmatter:
+    if not is_structured_candidate(note, include_templates=include_templates, include_docs=include_docs) or not note.has_frontmatter:
         return findings
     for field, allowed in CONTROLLED_VALUES.items():
         if field not in note.frontmatter:
@@ -342,9 +378,9 @@ def check_controlled_values(note: Note) -> List[Finding]:
     return findings
 
 
-def check_lifecycle_rules(note: Note) -> List[Finding]:
+def check_lifecycle_rules(note: Note, include_templates: bool, include_docs: bool) -> List[Finding]:
     findings: List[Finding] = []
-    if not note.has_frontmatter:
+    if not is_structured_candidate(note, include_templates=include_templates, include_docs=include_docs) or not note.has_frontmatter:
         return findings
     status = scalar(note.frontmatter, "status")
     analysis_state = scalar(note.frontmatter, "analysis_state")
@@ -368,10 +404,12 @@ def check_lifecycle_rules(note: Note) -> List[Finding]:
     return findings
 
 
-def build_indexes(notes: List[Note]) -> Tuple[Dict[str, List[Path]], Dict[str, Path]]:
+def build_indexes(notes: List[Note], include_templates: bool, include_docs: bool) -> Tuple[Dict[str, List[Path]], Dict[str, Path]]:
     id_index: Dict[str, List[Path]] = {}
     link_targets: Dict[str, Path] = {}
     for note in notes:
+        if not is_validation_scope(note, include_templates=include_templates, include_docs=include_docs):
+            continue
         note_id = scalar(note.frontmatter, "id")
         if note_id:
             id_index.setdefault(note_id, []).append(note.path)
@@ -380,8 +418,10 @@ def build_indexes(notes: List[Note]) -> Tuple[Dict[str, List[Path]], Dict[str, P
     return id_index, link_targets
 
 
-def check_wikilinks(note: Note, link_targets: Dict[str, Path]) -> List[Finding]:
+def check_wikilinks(note: Note, link_targets: Dict[str, Path], include_templates: bool, include_docs: bool) -> List[Finding]:
     findings: List[Finding] = []
+    if not is_validation_scope(note, include_templates=include_templates, include_docs=include_docs):
+        return findings
     text = note.body
     for target in WIKILINK_PATTERN.findall(text):
         clean = target.strip()
@@ -390,9 +430,9 @@ def check_wikilinks(note: Note, link_targets: Dict[str, Path]) -> List[Finding]:
     return findings
 
 
-def check_relationship_links(note: Note, link_targets: Dict[str, Path]) -> List[Finding]:
+def check_relationship_links(note: Note, link_targets: Dict[str, Path], include_templates: bool, include_docs: bool) -> List[Finding]:
     findings: List[Finding] = []
-    if not note.has_frontmatter:
+    if not is_structured_candidate(note, include_templates=include_templates, include_docs=include_docs) or not note.has_frontmatter:
         return findings
     for key, value in note.frontmatter.items():
         if not (key.startswith("related_") or key in {"source_study", "source_note", "reviewed_item", "supersedes", "superseded_by", "parent_needs", "child_needs"}):
@@ -410,27 +450,29 @@ def check_relationship_links(note: Note, link_targets: Dict[str, Path]) -> List[
     return findings
 
 
-def validate() -> List[Finding]:
+def validate(include_templates: bool = False, include_docs: bool = False) -> List[Finding]:
     notes = load_notes()
-    id_index, link_targets = build_indexes(notes)
+    id_index, link_targets = build_indexes(notes, include_templates=include_templates, include_docs=include_docs)
     findings: List[Finding] = []
     for note in notes:
-        findings.extend(check_frontmatter(note))
-        findings.extend(check_required_fields(note))
-        findings.extend(check_id(note, id_index))
-        findings.extend(check_controlled_values(note))
-        findings.extend(check_lifecycle_rules(note))
-        findings.extend(check_wikilinks(note, link_targets))
-        findings.extend(check_relationship_links(note, link_targets))
+        findings.extend(check_frontmatter(note, include_templates=include_templates, include_docs=include_docs))
+        findings.extend(check_required_fields(note, include_templates=include_templates, include_docs=include_docs))
+        findings.extend(check_id(note, id_index, include_templates=include_templates, include_docs=include_docs))
+        findings.extend(check_controlled_values(note, include_templates=include_templates, include_docs=include_docs))
+        findings.extend(check_lifecycle_rules(note, include_templates=include_templates, include_docs=include_docs))
+        findings.extend(check_wikilinks(note, link_targets, include_templates=include_templates, include_docs=include_docs))
+        findings.extend(check_relationship_links(note, link_targets, include_templates=include_templates, include_docs=include_docs))
     return findings
 
 
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(description="Validate research repository metadata and links.")
     parser.add_argument("--warnings-as-errors", action="store_true", help="Treat warnings as errors.")
+    parser.add_argument("--include-templates", action="store_true", help="Also validate files in Templates/.")
+    parser.add_argument("--include-docs", action="store_true", help="Also validate docs, migration notes and inbox notes.")
     args = parser.parse_args(argv)
 
-    findings = validate()
+    findings = validate(include_templates=args.include_templates, include_docs=args.include_docs)
     errors = [f for f in findings if f.severity == "error"]
     warnings = [f for f in findings if f.severity == "warning"]
 
