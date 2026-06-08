@@ -1,30 +1,70 @@
 ---
 type: behaviour
-id: BEH_001
-actor: Parent
-journey_stage: University planning
-behaviour: Searches across multiple websites and forums to piece together SEND information
-related_needs: [UN_001]
-related_pain_points: [PP_001]
-related_evidence: [EVID_045, EVID_088]
-frequency: High / Medium / Low
-confidence: Medium
-tags: [send, university, research, parent]
+id: BEH_000
+actor:
+journey_stage:
+behaviour:
+status: assumption | draft | reviewed | validated | deprecated
+analysis_state: placeholder | candidate | drafted | evidence_linked | reviewed | validated | deprecated
+evidence_basis: none | indicative | traceable | substantiated | validated
+evidence_strength: none | weak | moderate | strong
+confidence: low | medium | high
+creation_mode: manual | llm_assisted | imported | migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed | needs_review | reviewed | rejected
+change_level: none | minor | material | major
+supersedes:
+superseded_by:
+related_evidence:
+related_needs:
+related_pain_points:
+related_insights:
+tags:
+  - send
 ---
-# Searches across multiple websites and forums to piece together SEND information
 
-### Summary
-Parents spend significant time visiting multiple university websites, online forums, and social media groups to understand SEND provision. This behaviour is time-consuming and often driven by low trust in official guidance channels.
+# Behaviour title
 
-### Triggers
-- Lack of centralised or authoritative information sources  
-- Desire to ensure their child’s needs will be met  
-- Anxiety about missing opportunities or deadlines  
+A behaviour should describe something a person does, avoids, repeats, compensates for or attempts in context.
 
-### Observed outcomes
-- Increased stress and cognitive load  
-- Reliance on anecdotal information  
-- Fragmented or incomplete understanding of support options  
+## Working formulation
 
-### Notes
-This behaviour often co-occurs with information-seeking and cross-validation habits. It is common in late-stage planning and reflects systemic gaps in information accessibility.
+Describe the behaviour clearly.
+
+## Triggers and conditions
+
+What appears to trigger this behaviour? What conditions make it more or less likely?
+
+## Evidence basis
+
+- Supporting evidence:
+- Contextual evidence:
+- Contradictory or limiting evidence:
+
+## Interpretation
+
+Why does this behaviour appear to happen? What barriers, motivations, anxieties or system conditions may shape it?
+
+## Observed or expected outcomes
+
+What does this behaviour lead to for the person, service or system?
+
+## Related objects
+
+- User needs:
+- Pain points:
+- Insights:
+- Value dimensions:
+
+## What remains uncertain
+
+## Review notes
+
+- Review date:
+- Reviewer:
+- Outcome:
+
+## Changelog
+
+- YYYY-MM-DD: Created as candidate behaviour. Status: assumption. Analysis state: candidate.
