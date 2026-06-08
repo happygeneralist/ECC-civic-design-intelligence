@@ -12,10 +12,23 @@ Governance should ensure that:
 
 - evidence is handled safely
 - assumptions are clearly marked
-- insights remain traceable to evidence
-- material changes are reviewed
-- LLM-generated content is controlled
+- analysis objects remain traceable to evidence where possible
+- fast-moving draft work does not get mistaken for validated findings
+- material changes are reviewed or made visible for review
+- LLM-generated and LLM-assisted content is controlled
 - validated findings are not changed without a clear review trail
+
+## Operating principle
+
+The repository should support:
+
+```text
+fast creation, slow validation
+```
+
+Fast creation means contributors and LLMs may create candidate or placeholder analysis objects quickly while breaking down research.
+
+Slow validation means these objects are not treated as reliable findings until their evidence, interpretation, status and review state justify it.
 
 ## Roles
 
@@ -29,15 +42,15 @@ Responsible for research integrity, interpretation quality and whether evidence 
 
 ### Contributor
 
-May add evidence, draft notes, suggest links and create synthesis outputs within the repository rules.
+May add evidence, draft notes, suggest links, create candidate analysis objects and create synthesis outputs within the repository rules.
 
 ### Reviewer
 
-Reviews draft or assumption-based material and decides whether it can be promoted, revised, rejected or kept as an assumption.
+Reviews draft, candidate or assumption-based material and decides whether it can be promoted, revised, rejected, deprecated or kept as an assumption.
 
 ### LLM assistant
 
-May help draft, classify, summarise and link material, but cannot validate research findings.
+May help capture structure, classify, summarise, link, create, decompose, merge, refactor and incrementally update analysis objects, but cannot validate research findings.
 
 ## What may be stored
 
@@ -55,6 +68,7 @@ The repository may store:
 - themes
 - personas
 - journeys
+- opportunities
 - review notes
 - synthesis outputs
 
@@ -70,15 +84,15 @@ The repository must not store:
 - unredacted case details
 - unsupported claims presented as validated findings
 
-## Evidence and interpretation
+## Evidence and analysis
 
-Evidence and interpretation must be kept distinct.
+Evidence and analysis must be kept distinct.
 
 Evidence notes should capture what was observed, said or measured.
 
-Interpretive notes, such as needs, behaviours, pain points and insights, should link back to evidence.
+Analysis objects are interpreted research objects created from evidence, researcher judgement and synthesis. They include user needs, behaviours, pain points, insights, themes, journeys, personas and opportunities.
 
-A claim without evidence may still be useful, but it must be marked as an assumption.
+A claim without evidence may still be useful, but it must be marked as an assumption, candidate or placeholder as appropriate.
 
 ## Validation authority
 
@@ -98,8 +112,8 @@ An item can be validated only when:
 Changes are classified as:
 
 - `minor`: spelling, formatting, metadata correction or link fix
-- `material`: changes interpretation, linked evidence, confidence, status or evidence strength
-- `major`: substantially reframes a finding, alters validated content or affects published outputs
+- `material`: changes interpretation, wording, linked evidence, confidence, status, analysis state or evidence strength
+- `major`: substantially reframes, splits, merges, replaces or deprecates an item, alters validated content or affects published outputs
 
 Material and major changes require a review trail.
 
@@ -107,20 +121,35 @@ Material and major changes require a review trail.
 
 LLM-assisted changes must follow `llm-instructions.md`.
 
-LLMs may create drafts and suggest changes, but they must not:
+LLMs may create and alter analysis objects, including user needs, behaviours, pain points, insights, themes, journeys, personas and opportunities.
+
+LLMs may create placeholder, candidate, drafted and evidence-linked objects at speed.
+
+They must not:
 
 - validate findings
-- upgrade evidence strength
+- upgrade evidence strength on reviewed or validated items
 - remove caveats
 - materially alter validated notes without review
 - silently rewrite participant evidence
+- hide the fact that an item was LLM-assisted
 
 LLM-generated content should be marked with:
 
 ```yaml
+creation_mode: llm_assisted
 llm_generated: true
 human_reviewed: false
 review_status: not_reviewed
+```
+
+For unsupported but useful candidate objects, use:
+
+```yaml
+status: assumption
+analysis_state: candidate
+evidence_strength: none
+confidence: low
 ```
 
 ## Pull request expectations
@@ -133,8 +162,10 @@ A pull request should explain:
 - why it changed
 - whether research content changed
 - whether assumptions were introduced
+- whether placeholder or candidate objects were created
 - whether evidence links were added or changed
-- whether any status or evidence strength changed
+- whether any status, analysis state or evidence strength changed
+- whether any items were split, merged, superseded or deprecated
 - what still requires review
 
 ## Audit and review
@@ -142,11 +173,13 @@ A pull request should explain:
 The repository should be reviewed periodically for:
 
 - unsupported validated claims
-- weakly sourced insights
+- weakly sourced analysis objects
 - assumptions that have not been reviewed
+- candidate objects that have become important but remain unreviewed
 - evidence without source studies
 - notes missing required metadata
 - identifiable or sensitive material
 - broken or inconsistent IDs
+- missing changelog entries for material changes
 
 Findings from audits should be recorded in `CHANGELOG.md` or review notes, depending on scope.
