@@ -1,66 +1,106 @@
-   # Research repository: guide for user researchers
+# ECC Research Repository
 
-Welcome to your research repository. 
+This repository is an Obsidian-compatible research and insights repository for SEND-related service design, policy and decision-support work.
 
-This guide explains what the repository is for, how it works, and why it matters for user research in public services.
+It is intended to help researchers, designers, product/service teams and decision-makers capture anonymised evidence, connect it to user needs, behaviours, pain points, insights, value dimensions and solution assessments, and maintain a clear audit trail for how research knowledge develops over time.
 
-## Why the repository exists
+The repository is not only for designing good services. It should also provide the human intelligence needed to challenge weak, harmful or solution-led decisions with a defensible evidence base.
 
-Research often ends up stored in slides or folders that are rarely revisited.  
-This wastes money and forces teams to rediscover the same problems.  
+## What this repository is for
 
-The repository helps by providing a shared space to:
+Use this repository to store and work with:
 
-- **Collect evidence once and reuse it.** Store quotes, observations, and survey results as individual notes so they can support multiple projects.  
-- **Make user needs visible.** Write needs as action statements.
-- **Link insights to their sources.** Each insight links to the studies and evidence that support it, helping teams base decisions on real data.  
-- **Support dignity in design.** Connect user needs with civic obligations and capabilities so teams consider whether services uphold people’s rights.  
-- **Reduce duplication.** Before starting new research, check what already exists. Build on it instead of repeating work.
+- research study summaries
+- anonymised evidence, quotes, observations and data points
+- user needs
+- behaviours
+- pain points
+- insights
+- themes
+- personas
+- journeys
+- value dimensions
+- solution options and assessments
+- review notes
+- synthesis outputs
 
-## Main goals
+The repository should support evidence-based service design, reduce duplicated research, make value visible, and make it easier to understand what is known, what is assumed, what is contested, and what still needs validation.
 
-The repository is designed to:
+## What this repository is not for
 
-- **Keep it simple and accessible.** Notes are plain-text Markdown files that you can edit in Obsidian, GitHub, or any text editor.  
-- **Use consistent templates and tags.** This makes it easier to compare findings across projects.  
-- **Maintain traceability.** Every insight or pain point links back to the evidence it came from.  
-- **Support civic-needs governance.** Help teams map user needs to wider civic capabilities and consider dignity and hidden burdens.  
-- **Enable rapid synthesis.** Use structured data to query and combine related notes quickly.
+Do not store:
 
-## What’s in the repository
+- raw transcripts
+- recordings
+- identifiable participant data
+- special category personal data that has not been anonymised
+- unsupported claims presented as validated findings
+- LLM-generated synthesis without clear status and review metadata
+- politically preferred solution ideas presented as evidence-backed recommendations
 
-The repository is organised into folders. Each folder contains one type of note.
+## Repository structure
 
-| Folder                  | What it holds                                              | Purpose                                                          |
-| ----------------------- | ---------------------------------------------------------- | ---------------------------------------------------------------- |
-| `001_Research_studies/` | Study summaries (method, participants, dates, findings).   | Show where evidence comes from.                                  |
-| `002_Evidence/`         | Anonymised quotes, observations, or statistics.            | Provide atomic evidence to support findings.                     |
-| `003_User_Needs/`       | High-level needs written as action statements.             | Describe what people want to achieve.                            |
-| `004_Behaviours/`       | Observable patterns of action.                             | Show what people do and why.                                     |
-| `005_Pain_points/`      | Barriers or frustrations.                                  | Highlight where users struggle.                                  |
-| `006_Insights/`         | Synthesised findings.                                      | Explain why things happen.                                       |
-| `007_Themes/`           | Cross-cutting topics.                                      | Show recurring patterns across services.                         |
-| `008_Personas/`         | Profiles that summarise user needs, behaviours and context | Help teams design for real user scenarios, experiment and learn. |
-| `009_Journey_parts/`    | Clusters of notes around a life stage.                     | Enable cross-project analysis.                                   |
-| `Templates/`            | Markdown templates.                                        | Ensure consistency and speed.                                    |
-| `docs/`                 | Governance and how-to guides.                              | Include checklists and this guide.                               |
+```text
+001_Research_studies/   Research activities and study summaries
+002_Evidence/           Anonymised quotes, observations and data points
+003_User_needs/         User needs and need summaries
+004_Behaviours/         Observed or inferred behaviours
+005_Pain_point/         Pain points and barriers
+006_Insights/           Draft, reviewed and validated insights
+007_Themes/             Cross-cutting themes
+008_Personas/           Personas or archetypes where appropriate
+009_Journeys/           Journey maps and journey-stage analysis
+Templates/              Templates for creating structured notes
+docs/                   Supporting documentation and governance material
+```
 
-## How to use the repository
+## Core principle
 
-Add and connect research in six steps:
+Every meaningful claim should be traceable to evidence, or clearly marked as an assumption.
 
-1. **Create a study** – Add a summary in `001_Research_studies/` with title, dates, method, participants, and purpose.
-2. **Capture evidence** – Record anonymised quotes or observations in `002_Evidence/` using the template provided.
-3. **Note pain points and behaviours** – Describe barriers and observable actions in their respective folders.
-4. **Write user needs** – Use clear action statements (for example, “Parents need clear, trustworthy guidance to plan SEND transitions”).
-5. **Create insights** – Summarise patterns, explain why they matter, and link them to related notes.
-6. **Group and analyse** – Use journey parts and themes to spot wider patterns and avoid duplication.
+The repository distinguishes between:
 
-## Tips for success
+- captured evidence
+- draft synthesis
+- assumptions
+- reviewed analysis
+- validated findings
+- value dimensions
+- solution options and recommendations
+- deprecated or superseded material
 
-- **Capture what matters.** Record evidence that informs decisions.    
-- **Use verbs and avoid solutions.** Write needs as actions, not feaures.
-- **Include multiple perspectives.** Capture staff and user needs.
-- **Think about dignity and power.** Consider how services affect stress or hidden burdens.
-- **Tag consistently.** Use tags such as `#actor/parent` or `#stage/university-planning`.
-- **Maintain anonymity.** Paraphrase or remove details that could identify anyone.
+## How to use this repository
+
+1. Capture anonymised evidence in `002_Evidence/`.
+2. Link evidence to studies, actors, journey stages and tags.
+3. Code evidence into user needs, behaviours and pain points.
+4. Draft insights from linked evidence.
+5. Connect needs and insights to value dimensions where useful.
+6. Assess solution options against needs, value, evidence, risks and assumptions.
+7. Review assumptions, evidence basis and confidence.
+8. Promote reviewed work to validated status only when the evidence supports it.
+9. Record meaningful changes in both entry-level changelogs and the global `CHANGELOG.md`.
+
+## Working with Obsidian
+
+This repository is designed to work as an Obsidian vault. Use links, backlinks, properties and Dataview queries to navigate between evidence, needs, behaviours, insights, value dimensions and solution assessments.
+
+See `docs/Obsidian_workflow.md` for the recommended workflow.
+
+## Working with LLMs
+
+LLMs may be used to help classify, link, summarise and draft research material, but they must not be treated as evidence.
+
+LLMs must not mark anything as validated, upgrade evidence strength, remove caveats or materially change validated research claims without human review.
+
+See `llm-instructions.md` and `docs/LLM_safety_model.md`.
+
+## Key documentation
+
+- `SCHEMA.md` defines object types, required fields and controlled values.
+- `GOVERNANCE.md` defines repository governance and review responsibilities.
+- `CONTRIBUTING.md` defines how to add and update material safely.
+- `CHANGELOG.md` records repository-level changes.
+- `docs/Evidence_standards.md` defines what counts as evidence.
+- `docs/Review_process.md` defines review and validation steps.
+- `docs/Value_and_decision_evidence.md` defines how value, solution assessment and decision evidence are handled.
