@@ -1,17 +1,26 @@
 ---
 type: research_study
-id: S003
+id: RS_003
 title: Case Studies
-research_lead: [Claire Craig]
+research_lead:
+  - Claire Craig
 date_range: 2024-03 – 2024-05
 method: Semi-structured in-depth interviews
 participants: 7 families of young people with SEND (ages 12-18)
 setting: In-home interviews, Essex
-status: Completed
-confidence: High
-related_evidence: 
-related_insights: 
-tags: [send, parent, qualitative]
+status: captured
+analysis_state: captured
+confidence: high
+creation_mode: migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed
+related_evidence:
+related_insights:
+tags:
+  - send
+  - parent
+  - qualitative
 ---
 
 # Case studies
@@ -36,4 +45,4 @@ What, if any, sources of information are useful for these young people and their
 2. There is a sense of a drop-off in support post 16, with parents describing it as a cliff-edge.
 3. Young people who are allowed to tailor their education to suit their interests are able to envisage a future plan too.
 4. Young people and their families struggle to collate information about their options.
- 
+  

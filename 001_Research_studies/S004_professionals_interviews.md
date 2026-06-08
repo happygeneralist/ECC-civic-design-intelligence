@@ -1,17 +1,26 @@
 ---
 type: research_study
-id: S004
+id: RS_004
 title: Interviews with professionals
-research_lead: Claire Craig
+research_lead:
+  - Claire Craig
 date_range: 2024-03 – 2024-05
 method: Semi-structured in-depth interviews
 participants: 12 professionals who work with young people with SEND
 setting: Online interviews, Essex
-status: Completed
-confidence: High
-related_evidence: 
-related_insights: 
-tags: [send, professionals, qualitative]
+status: captured
+analysis_state: captured
+confidence: high
+creation_mode: migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed
+related_evidence:
+related_insights:
+tags:
+  - send
+  - professionals
+  - qualitative
 ---
 
 # Interviews with professionals
@@ -35,4 +44,4 @@ What role do professionals play in helping young people with SEND make decisions
 1. Professionals working with young people with SEND have to curate information for them and their families.
 2. Professionals identify a lack of options for young people beyond 16.
 3. There is a lack of support for young people with moderate special needs, especially when they don't have an EHCP.
- 
+  

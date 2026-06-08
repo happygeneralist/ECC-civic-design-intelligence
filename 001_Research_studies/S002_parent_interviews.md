@@ -8,8 +8,13 @@ date_range: 2024-03 – 2024-05
 method: Semi-structured interviews
 participants: 10 parents of children with SEND (ages 12-18)
 setting: Online interviews
-status: Completed
-confidence: High
+status: captured
+analysis_state: captured
+confidence: high
+creation_mode: migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed
 related_evidence:
   - EVID_001
   - EVID_002
@@ -65,4 +70,3 @@ LIST FROM "003_User_Needs" WHERE any(related_evidence, ev => ev.source_study = t
 
 #### Pain points
 LIST FROM "006_Pain_Points" WHERE any(related_evidence, ev => ev.source_study = this.file.link)
-
