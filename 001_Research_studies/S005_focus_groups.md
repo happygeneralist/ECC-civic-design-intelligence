@@ -1,17 +1,27 @@
 ---
 type: research_study
-id: S005
+id: RS_005
 title: Focus groups
-research_lead: Claire Craig
+research_lead:
+  - Claire Craig
 date_range: 2024-11
 method: Semi structured online focus groups
 participants: One group of young people (age 12-22), three groups of parents of young people being educated in different settings
 setting: Online groups, Essex
-status: Completed
-confidence: High
-related_evidence: 
-related_insights: 
-tags: [send, parents, young people, qualitative]
+status: captured
+analysis_state: captured
+confidence: high
+creation_mode: migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed
+related_evidence:
+related_insights:
+tags:
+  - send
+  - parents
+  - young people
+  - qualitative
 ---
 
 # Focus Groups
@@ -36,4 +46,3 @@ How do parents and young people navigate decision-making about their future opti
 1.	Young people with SEND in mainstream school are struggling significantly with their mental health, and this is having a debilitating effect on their ability to plan for the future.
 2.	Parents often feel overwhelmed and unsupported.
 3.	There is a sense that information about options is found by chance through random connections.
-
