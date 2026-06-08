@@ -1,11 +1,18 @@
 ---
 type: evidence
-id: EVIDQ001
+id: EVID_004
 source_study:
+evidence_kind: statistic
 actor: Young people
 context:
-journey_stage: Us
-confidence: Low
+journey_stage: Use
+status: captured
+analysis_state: captured
+confidence: low
+creation_mode: migrated
+llm_generated: false
+human_reviewed: false
+review_status: not_reviewed
 tags:
   - send
 ---
