@@ -4,6 +4,26 @@ This changelog records repository-level changes.
 
 Use entry-level changelogs inside individual notes for changes to specific evidence, needs, behaviours, pain points, insights or review notes.
 
+## 2026-06-09
+
+### Added
+
+- Added `docs/Safe_research_ingestion_MVP.md` to define the minimum conventions for breaking a small SEND pathway-planning research sample into structured objects.
+- Added `docs/Object_change_logs.md` to define when object-level changelog entries are required and when Git and pull request summaries are enough.
+- Added `Templates/Civic_need_template.md` so civic needs can be created as first-class analysis objects during the MVP.
+
+### Changed
+
+- Updated `README.md` to reference civic needs, the safe-ingestion MVP and the object changelog convention.
+- Updated `CONTRIBUTING.md` to clarify safe ingestion, civic needs and object-level changelog rules.
+
+### Notes
+
+- This is an administrative documentation and template change.
+- No existing research objects were migrated or semantically changed.
+- No existing object was promoted, validated, deprecated or marked as reviewed.
+- Object-level changelog entries were not added because the change does not alter the interpretation of existing research objects.
+
 ## 2026-06-08
 
 ### Added
