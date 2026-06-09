@@ -87,6 +87,18 @@ An LLM intervention log is usually not required for:
 
 Administrative changes can be recorded in the PR summary or a lightweight object change-log entry.
 
+## Low-friction logging modes
+
+Do not create standalone event files for every LLM-assisted action.
+
+Use the lightest mode that preserves the right level of governance:
+
+1. **PR-level LLM note**: for small batches where there is possible semantic risk but no major first-class object rewrite.
+2. **Object change-log entry**: for a meaningful but simple update to one object.
+3. **Standalone LLM intervention log**: for material semantic changes to first-class objects, especially user needs, evidence-derived insights or maturity changes.
+
+Use standalone event files when the event is likely to need future querying or review.
+
 ## Human review rules
 
 If `semantic_change: possible`, the object should normally be marked:
@@ -107,6 +119,21 @@ human_reviewed: false
 unless a human review occurs as part of the same change.
 
 For first-class objects such as user needs, material LLM-assisted changes should not be treated as validated until reviewed.
+
+## Validation guardrails
+
+LLMs should not upgrade research maturity.
+
+Recommended rules:
+
+- LLMs may set `status: captured` or equivalent migration/current-state values during migration.
+- LLMs may set `review_status: needs_review` when semantic risk exists.
+- LLMs may not set `review_status: reviewed` unless a human has explicitly reviewed the change.
+- LLMs may not set `maturity_state: validated`.
+- LLMs may not set `evidence_basis: validated`.
+- LLMs may not mark an LLM-assisted material interpretation as accepted without human review.
+
+This prevents plausible language from being mistaken for validated knowledge.
 
 ## Recommended LLM intervention log format
 
@@ -151,9 +178,15 @@ Suggested content:
 
 Clarify the user need statement based on linked evidence.
 
-## What changed semantically
+## Semantic diff
 
-The wording shifted from a generic information-access framing to an interpretive decision-support framing.
+**Before meaning:** The need was framed as access to information.
+
+**After meaning:** The need is framed as interpretive decision support.
+
+**What changed:** The implied intervention space expanded from content or navigation to guided support, comparison and decision scaffolding.
+
+**Reviewer question:** Does the linked evidence justify this broader interpretation?
 
 ## Potential risk
 
@@ -164,10 +197,57 @@ This change may alter the implied intervention space from content provision to r
 - [[EVID_001]]
 - [[BEH_001]]
 
+## LLM risk checklist
+
+- Preserved user language: partially
+- Changed uncertainty: no
+- Changed solution space: yes
+- Changed actor: no
+- Changed level: possible
+- Changed evidence basis: no
+
 ## Review notes
 
 Pending human review.
 ```
+
+## Semantic diff practice
+
+For material LLM changes, record a semantic diff rather than a file diff.
+
+Use this pattern:
+
+```markdown
+## Semantic diff
+
+**Before meaning:**
+
+**After meaning:**
+
+**What changed:**
+
+**Risk:**
+
+**Reviewer question:**
+```
+
+The semantic diff should explain what changed in interpretation, not repeat the Git diff.
+
+## LLM risk checklist
+
+When an LLM changes wording or interpretation, check:
+
+```yaml
+preserved_user_language: yes | no | partially | not_applicable
+changed_uncertainty: yes | no | unclear
+changed_solution_space: yes | no | unclear
+changed_actor: yes | no
+changed_level: yes | no | unclear
+changed_evidence_basis: yes | no
+changed_relationships: yes | no
+```
+
+This helps reviewers see whether the LLM has changed the problem framing.
 
 ## What the log should capture
 
