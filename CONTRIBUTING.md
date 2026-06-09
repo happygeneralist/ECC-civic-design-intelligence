@@ -19,11 +19,13 @@ Check whether the repository already contains:
 
 - a relevant research study
 - similar evidence
-- a related user need
+- a related user need or civic need
 - an existing behaviour, pain point or insight
 - a relevant theme or journey stage
 
 Prefer linking and extending existing notes where appropriate. Create new notes when the concept is genuinely distinct.
+
+For the current MVP, follow `docs/Safe_research_ingestion_MVP.md` before breaking research into structured objects.
 
 ## File naming
 
@@ -35,6 +37,7 @@ Recommended pattern:
 RS_001_send_survey.md
 EVID_001_signposting_quote.md
 UN_001_match_options_to_needs.md
+CN_001_dignified_access_to_pathway_choices.md
 BEH_001_discusses_pathway_options.md
 PP_001_fragmented_information.md
 INS_001_aspiration_changes_with_age.md
@@ -50,7 +53,7 @@ Avoid untitled files and temporary names in committed work.
 4. Complete required metadata.
 5. Add links to related evidence or source material.
 6. Set the correct status and review status.
-7. Add a changelog entry.
+7. Add a changelog entry when required by `docs/Object_change_logs.md`.
 
 ## Evidence notes
 
@@ -85,6 +88,22 @@ Avoid writing user needs as:
 
 A user need may be drafted from assumptions, but it must be labelled as an assumption until anchored to evidence and reviewed.
 
+## Civic needs
+
+Civic needs should describe what the institution, public service or system must uphold for people, communities or public outcomes.
+
+Use civic needs when the research points to:
+
+- institutional obligations
+- public value
+- rights, fairness or accountability issues
+- access burden
+- redressability
+- system-level failure or duty
+- conditions needed for trust, dignity, agency or equitable service access
+
+During the MVP, civic needs may live in `003_User_needs/` using the `CN_000` ID pattern and `type: civic_need`. A later schema review can decide whether they need a separate folder.
+
 ## Insights
 
 Insights should explain why something is happening and why it matters.
@@ -102,22 +121,44 @@ A good insight should include:
 
 Only a human reviewer may promote an item to `validated`.
 
-Do not change status, confidence or evidence strength without updating the entry-level changelog.
+Do not change status, confidence, analysis state, review status or evidence strength without checking whether an entry-level changelog is required.
 
 ## Changelog entries
 
 Every meaningful note should include an entry-level changelog.
 
-Use this format:
+Use `docs/Object_change_logs.md` to decide when an object-level changelog entry is required.
+
+The core rule is:
+
+```text
+If the change affects how the object should be interpreted, used, trusted or acted on, record it.
+
+If the change only affects formatting, metadata or validation hygiene, rely on Git and the pull request summary.
+```
+
+Use this simple format for object creation:
 
 ```markdown
 ## Changelog
 
-- YYYY-MM-DD: Created as draft. Evidence strength: weak. Review status: not reviewed.
-- YYYY-MM-DD: Linked to [[EVID_004]] and updated confidence from low to medium after review.
+- YYYY-MM-DD: Created as candidate user need. Status: assumption. Analysis state: candidate. Evidence basis: none.
 ```
 
-Repository-wide changes should also be recorded in `CHANGELOG.md`.
+Use this fuller format for material semantic changes:
+
+```markdown
+## Changelog
+
+### YYYY-MM-DD
+
+- Changed:
+- Reason:
+- Effect:
+- Changed by:
+```
+
+Repository-wide changes should be recorded in `CHANGELOG.md`.
 
 ## Branch workflow
 
