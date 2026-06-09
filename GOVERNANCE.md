@@ -8,12 +8,15 @@ For the legal basis and data protection rationale, see `docs/Governance_legal_ba
 
 The repository exists to support evidence-based service design and public decision-making by making anonymised research knowledge reusable, traceable and reviewable.
 
+It is also intended to form part of a wider civic design intelligence system: open knowledge infrastructure for public-service needs, evidence, pain and decisions.
+
 Governance should ensure that:
 
 - evidence is handled safely
 - assumptions are clearly marked
 - analysis objects remain traceable to evidence where possible
 - fast-moving draft work does not get mistaken for validated findings
+- external contributions can challenge or enrich the knowledge base without directly overwriting canonical objects
 - material changes are reviewed or made visible for review
 - LLM-generated and LLM-assisted content is controlled
 - validated findings are not changed without a clear review trail
@@ -30,6 +33,14 @@ Fast creation means contributors and LLMs may create candidate or placeholder an
 
 Slow validation means these objects are not treated as reliable findings until their evidence, interpretation, status and review state justify it.
 
+## Open civic intelligence principle
+
+The repository should be open, inspectable and contestable where it is safe and appropriate to do so.
+
+People outside the institution may hold better knowledge about how a service is actually experienced. This includes families, residents, third-sector organisations, advocates, frontline professionals, partner agencies and researchers.
+
+External knowledge should be welcomed as evidence input, challenge or correction. It should not bypass triage, safeguarding, privacy checks, evidence assessment or human review.
+
 ## Roles
 
 ### Repository owner
@@ -43,6 +54,12 @@ Responsible for research integrity, interpretation quality and whether evidence 
 ### Contributor
 
 May add evidence, draft notes, suggest links, create candidate analysis objects and create synthesis outputs within the repository rules.
+
+### External contributor
+
+May submit evidence, corrections, lived experience, professional knowledge, partner intelligence or challenges to existing objects.
+
+External contributors do not directly change canonical knowledge objects unless a governed contribution workflow and appropriate permissions exist. Their contributions should be triaged, linked, reviewed and incorporated where appropriate.
 
 ### Reviewer
 
@@ -61,7 +78,10 @@ The repository may store:
 - survey findings
 - coded evidence
 - study summaries
+- academic, sector, statutory, regulatory, Ombudsman, inspection, policy and operational evidence
+- triaged public, partner or professional contributions
 - user needs
+- civic needs
 - behaviours
 - pain points
 - insights
@@ -88,11 +108,37 @@ The repository must not store:
 
 Evidence and analysis must be kept distinct.
 
-Evidence notes should capture what was observed, said or measured.
+Evidence notes should capture what was observed, said, measured or sourced.
 
-Analysis objects are interpreted research objects created from evidence, researcher judgement and synthesis. They include user needs, behaviours, pain points, insights, themes, journeys, personas and opportunities.
+Analysis objects are interpreted research objects created from evidence, researcher judgement and synthesis. They include user needs, civic needs, behaviours, pain points, insights, themes, journeys, personas and opportunities.
 
 A claim without evidence may still be useful, but it must be marked as an assumption, candidate or placeholder as appropriate.
+
+## External contribution governance
+
+External contributions may support, challenge, refine or contradict existing objects.
+
+Before they affect canonical knowledge, they should be assessed for:
+
+- relevance
+- source clarity
+- sensitivity
+- identifiability
+- safeguarding concerns
+- legal risk
+- evidence strength
+- relationship to existing objects
+- whether they introduce contradiction, uncertainty or a need for review
+
+External contributions may lead to:
+
+- a new evidence note
+- a candidate user need, civic need, behaviour, pain point, insight or risk
+- an update to supporting, contradictory or limiting evidence
+- a material change to an existing object
+- a decision to defer, reject or restrict the contribution
+
+Material changes caused by external contributions should be recorded in the relevant object changelog.
 
 ## Validation authority
 
@@ -165,6 +211,7 @@ A pull request should explain:
 - whether placeholder or candidate objects were created
 - whether evidence links were added or changed
 - whether any status, analysis state or evidence strength changed
+- whether any external contribution was used to support, challenge or change an object
 - whether any items were split, merged, superseded or deprecated
 - what still requires review
 
@@ -176,7 +223,8 @@ The repository should be reviewed periodically for:
 - weakly sourced analysis objects
 - assumptions that have not been reviewed
 - candidate objects that have become important but remain unreviewed
-- evidence without source studies
+- evidence without source studies or source references
+- external contributions that remain untriaged
 - notes missing required metadata
 - identifiable or sensitive material
 - broken or inconsistent IDs

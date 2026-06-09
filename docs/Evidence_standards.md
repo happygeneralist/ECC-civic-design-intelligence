@@ -6,12 +6,16 @@ This file defines what counts as evidence in the repository and how evidence sho
 
 Evidence is material that has been captured, observed, measured or sourced. Interpretation of evidence should happen in linked synthesis notes, not be hidden inside evidence records.
 
+The repository is not limited to primary research. Evidence may come from research, lived experience, academic studies, statutory and regulatory reports, complaints, inspections, policy, operational data, professional knowledge and public or partner contributions.
+
+Inputs are evidence sources. User needs, civic needs, pain points, behaviours, risks, insights and opportunities are knowledge objects created from, linked to or challenged by those sources.
+
 ## Evidence kinds
 
 Use the `evidence_kind` field to classify evidence.
 
 ```yaml
-evidence_kind: quote | observation | survey_result | statistic | document_extract | desk_research | professional_judgement
+evidence_kind: quote | observation | survey_result | statistic | document_extract | desk_research | professional_judgement | public_contribution | partner_contribution | operational_record
 ```
 
 ## Evidence kind definitions
@@ -58,6 +62,46 @@ A claim or interpretation from a practitioner, professional, stakeholder or subj
 
 Professional judgement can be valuable but should not automatically be treated as user evidence.
 
+### Public contribution
+
+A contribution, correction, challenge or account submitted by a member of the public, service user, family member, carer or resident.
+
+Public contributions can reveal missing needs, understated pain points, gaps between official process and lived experience, or evidence that a knowledge object needs to be challenged or refined.
+
+Public contributions should be triaged for relevance, safety, privacy, identifiability and sensitivity before they are linked to canonical knowledge objects.
+
+### Partner contribution
+
+A contribution, correction, challenge or account from a third-sector organisation, advocate, partner agency, community organisation or other external partner.
+
+Partner contributions can provide system-level knowledge, cross-case patterns, advocacy evidence, professional context or challenge to institutional assumptions.
+
+Partner contributions should preserve the contributor's intended meaning while making the evidence basis, scope and limitations explicit.
+
+### Operational record
+
+A relevant operational signal, case pattern, service metric, demand pattern, escalation theme, complaints pattern or frontline record.
+
+Operational records can indicate friction, demand failure, delay, risk, unmet need or implementation failure. They should include source, time period and method notes where possible.
+
+## Evidence source examples
+
+Evidence may come from:
+
+- primary research and lived-experience research
+- academic studies and literature reviews
+- Ofsted, CQC, Ombudsman and other statutory or regulatory reports
+- complaints, appeals, tribunal findings and case reviews
+- policy, legislation, statutory guidance and local procedures
+- operational data, service metrics and demand data
+- frontline practitioner knowledge
+- voluntary-sector and advocacy reports
+- public, family, carer or resident contributions
+- previous service design, discovery and delivery work
+- design histories and decision records
+
+A source may support, challenge, refine or supersede a knowledge object. It should not automatically become a validated finding.
+
 ## Evidence metadata
 
 Evidence notes should include:
@@ -82,6 +126,19 @@ related_pain_points:
 related_insights:
 tags:
 ```
+
+For external public or partner contributions, add optional metadata where useful:
+
+```yaml
+contribution_source: public | partner | professional | third_sector | statutory_report | academic | operational | policy
+contribution_state: submitted | triaged | linked | candidate | under_review | accepted | partially_accepted | deferred | not_accepted | sensitive_restricted
+contributor_type:
+source_title:
+source_date:
+source_url:
+```
+
+Do not introduce these fields casually across the MVP unless they are useful for the worked example. They describe the direction for contribution-aware evidence handling.
 
 ## Confidence
 
@@ -163,6 +220,21 @@ anonymisation_checked: true | false
 sensitivity: low | medium | high
 ```
 
+## Public and partner contribution safety
+
+External contributions may include sensitive, identifiable or legally risky material. Before making a contribution public or linking it to canonical objects, check for:
+
+- names or direct identifiers
+- identifiable child, family, school or professional details
+- special category data
+- safeguarding concerns
+- allegations about identifiable people
+- legal sensitivity
+- consent or permission issues
+- rare combinations of details that may identify a person or case
+
+Open by default does not mean publishing unsafe detail. Preserve meaning while reducing unnecessary identifiability.
+
 ## What evidence can support
 
 ### Can support validated findings
@@ -172,12 +244,15 @@ sensitivity: low | medium | high
 - survey results with clear method and sample
 - sourced statistics
 - triangulated desk research
+- statutory, regulatory or inspection findings with clear scope and date
+- public, partner or professional contributions that have been triaged, contextualised and triangulated
 
 ### Usually supports draft or assumption only
 
 - single ambiguous quote
 - unsupported statistic
 - professional judgement without user evidence
+- untriaged public or partner contribution
 - LLM-generated summary
 - notes with unclear source
 - early pattern without review

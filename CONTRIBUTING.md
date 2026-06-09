@@ -13,11 +13,13 @@ Contributions should be:
 - linked to relevant notes
 - reviewed before being treated as validated
 
+The repository may eventually support public, partner and professional contributions as part of a wider civic design intelligence system. These contributions should strengthen the evidence base without directly overwriting the canonical knowledge layer.
+
 ## Before adding material
 
 Check whether the repository already contains:
 
-- a relevant research study
+- a relevant research study or evidence source
 - similar evidence
 - a related user need or civic need
 - an existing behaviour, pain point or insight
@@ -26,6 +28,33 @@ Check whether the repository already contains:
 Prefer linking and extending existing notes where appropriate. Create new notes when the concept is genuinely distinct.
 
 For the current MVP, follow `docs/Safe_research_ingestion_MVP.md` before breaking research into structured objects.
+
+## External contribution handling
+
+External contributions may come from the public, families, residents, third-sector organisations, advocates, professionals, partner agencies, academic sources, public reports or operational sources.
+
+Treat external contributions as evidence inputs or candidate knowledge, not automatic changes to reviewed or validated objects.
+
+A contribution may:
+
+- support an existing object
+- challenge an existing object
+- refine wording or scope
+- provide contradictory or limiting evidence
+- identify a missing need, civic need, behaviour, pain point, risk or insight
+- suggest that an object should be superseded
+- reveal a sensitivity, safeguarding or privacy issue
+
+Before incorporating an external contribution into a canonical object:
+
+1. Triage the contribution for relevance, safety, sensitivity and identifiability.
+2. Check whether it links to an existing object.
+3. Preserve the contributor's intended meaning.
+4. Record uncertainty, limitations or contradiction.
+5. Create candidate objects where needed rather than forcing immature material into reviewed objects.
+6. Use an object changelog if the contribution materially changes interpretation, evidence basis, maturity, lifecycle state or value delivery.
+
+Do not use public or partner contributions to mark an object as reviewed or validated unless a human reviewer has explicitly made that judgement.
 
 ## File naming
 
@@ -63,7 +92,7 @@ Do not rewrite participant quotes except to anonymise identifying details.
 
 Every evidence note should include, where known:
 
-- source study
+- source study or source reference
 - actor
 - context
 - journey stage
@@ -182,6 +211,7 @@ Before opening a pull request, check:
 - [ ] Evidence is anonymised or anonymisation status is explicit.
 - [ ] New notes use the schema.
 - [ ] Assumptions are labelled.
+- [ ] External contributions are triaged before affecting canonical objects.
 - [ ] LLM-generated notes are marked.
 - [ ] Material changes have changelog entries.
 - [ ] Validated content has not been changed without review.
@@ -196,7 +226,8 @@ Reviewers should check:
 - whether status values are justified
 - whether uncertainty has been retained
 - whether any assumptions have been introduced
-- whether participant material remains anonymised
+- whether external contributions have been handled safely
+- whether participant or contributor material remains anonymised
 - whether the change should be minor, material or major
 
 ## LLM-assisted contributions
