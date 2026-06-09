@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Civic design intelligence system</title>
+  <style>
+    :root {
+      --ink: #0b0c0c;
+      --muted: #505a5f;
+      --link: #1d70b8;
+      --border: #b1b4b6;
+      --panel: #f3f2f1;
+      --accent: #12436d;
+      --accent-light: #d2e2f1;
+      --green: #005a30;
+      --yellow: #ffdd00;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 19px;
+      line-height: 1.45;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration-thickness: max(1px, .0625rem);
+      text-underline-offset: .1578em;
+    }
+
+    a:hover {
+      text-decoration-thickness: max(3px, .1875rem, .12em);
+    }
+
+    .top-bar {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .top-bar__inner,
+    .container {
+      width: min(1100px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .top-bar__inner {
+      padding: 14px 0;
+      font-weight: 700;
+    }
+
+    .phase-banner {
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+      font-size: 16px;
+    }
+
+    .phase-tag {
+      display: inline-block;
+      margin-right: 8px;
+      padding: 2px 8px;
+      color: var(--ink);
+      background: var(--yellow);
+      font-weight: 700;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      background: var(--accent);
+      color: var(--white);
+      padding: 56px 0 64px;
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, .7fr);
+      gap: 48px;
+      align-items: center;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 20px;
+      line-height: 1.1;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(42px, 7vw, 64px);
+      letter-spacing: -0.03em;
+    }
+
+    h2 {
+      margin-top: 56px;
+      font-size: clamp(30px, 4vw, 42px);
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+
+    .hero p {
+      max-width: 720px;
+      margin: 0 0 28px;
+      font-size: 24px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-right: 16px;
+      margin-bottom: 12px;
+      padding: 12px 18px;
+      border: 2px solid transparent;
+      color: var(--ink);
+      background: var(--yellow);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .button--secondary {
+      color: var(--white);
+      background: transparent;
+      border-color: var(--white);
+    }
+
+    .diagram {
+      padding: 24px;
+      background: rgba(255, 255, 255, .12);
+      border: 1px solid rgba(255, 255, 255, .35);
+    }
+
+    .diagram__node {
+      margin: 0 0 14px;
+      padding: 14px;
+      background: var(--white);
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .diagram__arrow {
+      margin: -4px 0 10px;
+      color: var(--white);
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .lead {
+      max-width: 760px;
+      font-size: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 28px;
+    }
+
+    .card {
+      padding: 24px;
+      border-top: 6px solid var(--accent);
+      background: var(--panel);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      padding: 20px;
+      border-left: 6px solid var(--green);
+      background: var(--panel);
+    }
+
+    .stat__value {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 44px;
+      line-height: 1;
+      font-weight: 700;
+    }
+
+    .stat__label {
+      display: block;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .stat__hint {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .metadata {
+      margin-top: 24px;
+      padding: 18px;
+      border-left: 6px solid var(--accent);
+      background: var(--accent-light);
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 24px;
+      border-collapse: collapse;
+      font-size: 18px;
+    }
+
+    th,
+    td {
+      padding: 12px 10px 12px 0;
+      border-bottom: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th:last-child,
+    td:last-child {
+      text-align: right;
+    }
+
+    .footer {
+      margin-top: 72px;
+      padding: 36px 0;
+      border-top: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    @media (max-width: 850px) {
+      .hero__grid,
+      .grid,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 40px 0 48px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="top-bar">
+    <div class="top-bar__inner">Civic design intelligence system</div>
+  </header>
+
+  <div class="phase-banner">
+    <div class="container">
+      <span class="phase-tag">MVP</span>
+      SEND pathway planning is the current worked example. The model is intended to be reusable across public services.
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <h1>Build a shared understanding of public-service needs</h1>
+          <p>Open knowledge infrastructure for public-service needs, evidence, pain and decisions.</p>
+          <a class="button" href="../">View the repository</a>
+          <a class="button button--secondary" href="Civic_design_intelligence_system.md">Read the strategic vision</a>
+        </div>
+        <div class="diagram" aria-label="System layers">
+          <div class="diagram__node">Evidence and contribution layer</div>
+          <div class="diagram__arrow">↓</div>
+          <div class="diagram__node">Canonical knowledge layer</div>
+          <div class="diagram__arrow">↓</div>
+          <div class="diagram__node">Decision and history layer</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <h2>What this system is for</h2>
+      <p class="lead">The repository turns fragmented research, lived experience, public reports and operational knowledge into traceable objects that can support better service, policy and operational decisions.</p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Preserve what is known</h3>
+          <p>Capture evidence, user needs, civic needs, behaviours, pain points, insights and value dimensions as persistent knowledge objects.</p>
+        </article>
+        <article class="card">
+          <h3>Make decisions traceable</h3>
+          <p>Help design histories, policy records and operational decisions reference stable knowledge objects instead of rewriting them.</p>
+        </article>
+        <article class="card">
+          <h3>Expose gaps and risk</h3>
+          <p>Show where evidence is missing, where pain blocks value, and where public-service outcomes remain unsupported.</p>
+        </article>
+      </div>
+
+      <h2>Repository snapshot</h2>
+      <p class="lead">These figures are generated from repository folders and object metadata where available. Missing metadata is counted explicitly rather than inferred as reviewed or validated.</p>
+
+      <div class="stats-grid" id="stats-grid" aria-live="polite">
+        <div class="stat"><span class="stat__value">-</span><span class="stat__label">Loading stats</span></div>
+      </div>
+
+      <div class="metadata" id="stats-metadata">Generated stats will appear here when <code>docs/stats.json</code> is available.</div>
+
+      <h2>Object maturity</h2>
+      <p>The page treats missing metadata as an operational signal. It does not promote objects to reviewed or validated status.</p>
+      <div id="breakdowns"></div>
+
+      <h2>How the system works</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>1. Evidence and contribution layer</h3>
+          <p>Research, public reports, inspections, complaints, operational data, professional knowledge and lived experience.</p>
+        </article>
+        <article class="card">
+          <h3>2. Canonical knowledge layer</h3>
+          <p>Status-labelled user needs, civic needs, behaviours, pain points, insights, value dimensions and opportunities.</p>
+        </article>
+        <article class="card">
+          <h3>3. Decision and history layer</h3>
+          <p>Design histories, policy records and service decisions that reference stable knowledge objects.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      This page is generated from the civic design intelligence repository. It is a lightweight public overview, not a validation statement.
+    </div>
+  </footer>
+
+  <script>
+    const statDefinitions = [
+      ['markdown_objects', 'Markdown objects', 'Files counted in numbered knowledge-object folders.'],
+      ['service_areas', 'Service areas', 'From service area or domain metadata.'],
+      ['repository_areas', 'Repository areas', 'Numbered knowledge-object areas.'],
+      ['user_needs', 'User needs', 'Classified by folder, metadata or ID.'],
+      ['civic_needs', 'Civic needs', 'Classified by metadata or CN IDs.'],
+      ['evidence', 'Evidence items', 'Evidence objects and files.'],
+      ['pain_points', 'Pain points', 'Pain-point objects and files.'],
+      ['insights', 'Insights', 'Insight objects and files.']
+    ];
+
+    function formatValue(value) {
+      return Number.isFinite(value) ? value.toLocaleString('en-GB') : '0';
+    }
+
+    function renderStats(stats) {
+      const totals = stats.totals || {};
+      const grid = document.getElementById('stats-grid');
+      grid.innerHTML = statDefinitions.map(([key, label, hint]) => `
+        <div class="stat">
+          <span class="stat__value">${formatValue(totals[key])}</span>
+          <span class="stat__label">${label}</span>
+          <span class="stat__hint">${hint}</span>
+        </div>
+      `).join('');
+
+      const generatedAt = stats.generated_at ? new Date(stats.generated_at).toLocaleString('en-GB') : 'unknown';
+      document.getElementById('stats-metadata').innerHTML = `
+        <strong>Last generated:</strong> ${generatedAt}<br>
+        <strong>Source:</strong> ${stats.generated_from || 'Repository markdown files'}<br>
+        ${stats.scope_note || ''}
+      `;
+
+      renderBreakdowns(stats);
+    }
+
+    function renderTable(title, data) {
+      const entries = Object.entries(data || {}).sort((a, b) => b[1] - a[1]);
+      if (!entries.length) return '';
+      return `
+        <h3>${title}</h3>
+        <table>
+          <thead><tr><th>Category</th><th>Count</th></tr></thead>
+          <tbody>
+            ${entries.map(([key, value]) => `<tr><td>${key}</td><td>${formatValue(value)}</td></tr>`).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    function renderBreakdowns(stats) {
+      document.getElementById('breakdowns').innerHTML = [
+        renderTable('By status', stats.by_status),
+        renderTable('By lifecycle state', stats.by_lifecycle_state),
+        renderTable('By evidence strength', stats.by_evidence_strength)
+      ].join('');
+    }
+
+    fetch('stats.json', { cache: 'no-store' })
+      .then((response) => {
+        if (!response.ok) throw new Error('Stats file not available yet');
+        return response.json();
+      })
+      .then(renderStats)
+      .catch((error) => {
+        document.getElementById('stats-grid').innerHTML = `
+          <div class="stat">
+            <span class="stat__value">-</span>
+            <span class="stat__label">Stats not generated yet</span>
+            <span class="stat__hint">Run the Build GitHub Pages stats workflow.</span>
+          </div>
+        `;
+        document.getElementById('stats-metadata').textContent = error.message;
+      });
+  </script>
+</body>
+</html>
