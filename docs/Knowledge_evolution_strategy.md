@@ -14,6 +14,27 @@ They should not be treated as disposable notes that can be silently overwritten 
 
 A previous framing may later prove incomplete, too broad, too narrow or misdirected. That does not make it useless. It becomes part of the history of how the team understood the problem space.
 
+## Minimum viable practice
+
+Default to lightweight. Escalate only when meaning, evidence basis, maturity, lifecycle or governance changes.
+
+Use this decision rule:
+
+```text
+If the change affects how the object should be interpreted, used, trusted or acted on, record it.
+
+If the change only affects how the object is stored, formatted or validated, do not create a semantic change record unless it affects meaning.
+```
+
+For now:
+
+1. Add lightweight change logs only to first-class objects when meaning changes, starting with user needs.
+2. Use PR summaries for administrative migration batches.
+3. Do not create change-event files for routine metadata cleanup.
+4. Create LLM intervention logs only for material or risky semantic changes.
+5. Keep solved, dormant or deprecated objects visible when they may matter for future service, product or policy reasoning.
+6. Do not add strict validator rules until there are real examples and a stable workflow.
+
 ## Three layers of history
 
 The repository should distinguish between three different kinds of history.
@@ -61,6 +82,23 @@ They answer questions such as:
 
 These logs are not a replacement for Git. They are a semantic and governance record.
 
+## Separate state, maturity and review
+
+Avoid forcing one field to do too many jobs.
+
+In future schema work, distinguish between:
+
+```yaml
+lifecycle_state: active | superseded | deprecated | resolved | dormant
+maturity_state: captured | reviewed | validated
+review_status: not_reviewed | needs_review | reviewed | rejected
+evidence_basis: none | indicative | traceable | substantiated | validated
+```
+
+This matters because an object can be both mature and no longer active. For example, a user need may once have been validated but later become superseded by a better-framed need.
+
+If the repository keeps a single `status` field for now, treat it as a pragmatic current-state field and recognise that it may need to split later.
+
 ## What should be logged in object change logs
 
 Object change logs should record meaningful evolution, not mechanical edits.
@@ -75,6 +113,7 @@ Record changes such as:
 - evidence basis changed
 - review status changed
 - object split, merged, superseded or deprecated
+- pain point marked resolved, dormant or recurring
 - meaning changed because new research reframed the problem
 
 Do not normally record detailed entries for:
@@ -141,11 +180,31 @@ change_type:
   - merged
   - superseded
   - deprecated
+  - resolved
+  - dormant
+  - recurrence_risk_changed
   - review_status_changed
   - validation_status_changed
 ```
 
 A future validator or tool can use these values to support consistent querying.
+
+## Relationship to dashboards and service intelligence
+
+The purpose of knowledge evolution is not documentation for its own sake. It should support product, service and civic decision-making.
+
+A future dashboard or query layer should be able to show:
+
+- where user needs are well evidenced
+- where user needs remain weak or unreviewed
+- where pain points are unresolved
+- where pain points are resolved but have high recurrence risk
+- where pain blocks value delivery
+- where service changes have addressed a need or pain point
+- where validated needs are not yet covered by interventions
+- where LLM-assisted interpretations are still awaiting review
+
+This is why solved or dormant pain points should not simply be deleted. They can become useful signals for coverage, regression risk and future monitoring.
 
 ## Relationship to status and evidence basis
 
@@ -178,20 +237,24 @@ Start with:
 
 1. Add lightweight `## Change log` guidance to first-class templates, starting with user needs.
 2. Create a separate LLM intervention logging pattern for material LLM-assisted changes.
-3. Add a change-events folder as an optional structure for future use.
+3. Add a change-events folder as an optional and experimental structure for future use.
 4. Keep Git as the technical source of truth.
 5. Use PR summaries for migration/admin batches.
+6. Delay strict validation until there are examples and the workflow is understood.
 
 ## Strategic intent
 
-The goal is not bureaucratic traceability. The goal is to preserve the reasoning behind research maturity.
+The goal is not bureaucratic traceability. The goal is to preserve the reasoning behind research maturity and make the current state of value delivery easier to understand.
 
 This enables future users of the repository to ask:
 
 - Which needs became stronger over time?
 - Which needs were superseded by better evidence?
 - Which assumptions have not yet been reviewed?
+- Which pain points are unresolved or recurring?
+- Which pain points are resolved but at risk of returning?
 - Which interpretations were LLM-assisted and still need human review?
 - Which service decisions were based on mature, traceable needs?
+- Where is value blocked by unresolved pain?
 
 The repository should make those questions answerable.
