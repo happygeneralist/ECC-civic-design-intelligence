@@ -1,10 +1,25 @@
 # ECC Research Repository
 
-This repository is an Obsidian-compatible research and insights repository for SEND-related service design, policy and decision-support work.
+This repository is an Obsidian-compatible civic design intelligence system for SEND-related service design, policy and decision-support work.
 
 It is intended to help researchers, designers, product/service teams and decision-makers capture anonymised evidence, connect it to user needs, civic needs, behaviours, pain points, insights, value dimensions and solution assessments, and maintain a clear audit trail for how research knowledge develops over time.
 
 The repository is not only for designing good services. It should also provide the human intelligence needed to challenge weak, harmful or solution-led decisions with a defensible evidence base.
+
+## Strategic vision
+
+The repository is part of an emerging **civic design intelligence system**: open knowledge infrastructure for public-service needs, evidence, pain and decisions.
+
+It is designed to become a shared, inspectable and contestable knowledge backbone for public services. Over time, it should help public institutions, third-sector organisations, professionals and members of the public contribute to a better shared understanding of what people need, where services cause harm or friction, and where public outcomes remain unsupported.
+
+The repository should separate:
+
+- evidence sources and external contributions
+- candidate or submitted knowledge
+- reviewed canonical knowledge objects
+- decision records and design histories that reference those objects
+
+External insight should strengthen the system without directly overwriting the canonical layer. Contributions from families, residents, third-sector organisations, advocates, professionals, public reports, inspections and academic studies should be treated as valuable evidence inputs that can support, challenge, refine or supersede existing knowledge objects.
 
 ## What this repository is for
 
@@ -12,6 +27,8 @@ Use this repository to store and work with:
 
 - research study summaries
 - anonymised evidence, quotes, observations and data points
+- public, partner or professional contributions after appropriate triage
+- academic, sector, Ombudsman, inspection, policy and operational evidence where relevant
 - user needs
 - civic needs
 - behaviours
@@ -62,6 +79,7 @@ Every meaningful claim should be traceable to evidence, or clearly marked as an 
 The repository distinguishes between:
 
 - captured evidence
+- submitted or candidate knowledge
 - draft synthesis
 - assumptions
 - reviewed analysis
@@ -87,7 +105,7 @@ If the change only affects formatting, metadata or validation hygiene, rely on G
 ## How to use this repository
 
 1. Capture anonymised evidence in `002_Evidence/`.
-2. Link evidence to studies, actors, journey stages and tags.
+2. Link evidence to studies, sources, actors, journey stages and tags.
 3. Code evidence into user needs, civic needs, behaviours and pain points.
 4. Draft insights from linked evidence.
 5. Connect needs and insights to value dimensions where useful.
@@ -113,6 +131,7 @@ See `llm-instructions.md` and `docs/LLM_safety_model.md`.
 
 ## Key documentation
 
+- `docs/Civic_design_intelligence_system.md` defines the open civic design intelligence vision, contribution model and relationship to design histories.
 - `docs/Safe_research_ingestion_MVP.md` defines the minimum safe-ingestion workflow for the current SEND pathway-planning worked example.
 - `docs/Object_change_logs.md` defines when object-level changelogs are required and when Git/PR history is enough.
 - `SCHEMA.md` defines object types, required fields and controlled values.
