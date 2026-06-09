@@ -2,7 +2,7 @@
 
 This repository is an Obsidian-compatible research and insights repository for SEND-related service design, policy and decision-support work.
 
-It is intended to help researchers, designers, product/service teams and decision-makers capture anonymised evidence, connect it to user needs, behaviours, pain points, insights, value dimensions and solution assessments, and maintain a clear audit trail for how research knowledge develops over time.
+It is intended to help researchers, designers, product/service teams and decision-makers capture anonymised evidence, connect it to user needs, civic needs, behaviours, pain points, insights, value dimensions and solution assessments, and maintain a clear audit trail for how research knowledge develops over time.
 
 The repository is not only for designing good services. It should also provide the human intelligence needed to challenge weak, harmful or solution-led decisions with a defensible evidence base.
 
@@ -13,6 +13,7 @@ Use this repository to store and work with:
 - research study summaries
 - anonymised evidence, quotes, observations and data points
 - user needs
+- civic needs
 - behaviours
 - pain points
 - insights
@@ -43,7 +44,7 @@ Do not store:
 ```text
 001_Research_studies/   Research activities and study summaries
 002_Evidence/           Anonymised quotes, observations and data points
-003_User_needs/         User needs and need summaries
+003_User_needs/         User needs, and civic needs during the MVP phase
 004_Behaviours/         Observed or inferred behaviours
 005_Pain_point/         Pain points and barriers
 006_Insights/           Draft, reviewed and validated insights
@@ -69,17 +70,32 @@ The repository distinguishes between:
 - solution options and recommendations
 - deprecated or superseded material
 
+## Current MVP focus
+
+The immediate MVP is safe ingestion of a small SEND pathway-planning research sample.
+
+Use `docs/Safe_research_ingestion_MVP.md` before breaking research into structured objects. It defines the minimum conventions for creating evidence, behaviours, pain points, user needs, civic needs, insights and themes without making immature knowledge look settled.
+
+Use `docs/Object_change_logs.md` when changing existing objects. The core rule is:
+
+```text
+If the change affects how the object should be interpreted, used, trusted or acted on, record it.
+
+If the change only affects formatting, metadata or validation hygiene, rely on Git and the pull request summary.
+```
+
 ## How to use this repository
 
 1. Capture anonymised evidence in `002_Evidence/`.
 2. Link evidence to studies, actors, journey stages and tags.
-3. Code evidence into user needs, behaviours and pain points.
+3. Code evidence into user needs, civic needs, behaviours and pain points.
 4. Draft insights from linked evidence.
 5. Connect needs and insights to value dimensions where useful.
 6. Assess solution options against needs, value, evidence, risks and assumptions.
 7. Review assumptions, evidence basis and confidence.
 8. Promote reviewed work to validated status only when the evidence supports it.
-9. Record meaningful changes in both entry-level changelogs and the global `CHANGELOG.md`.
+9. Record meaningful object-level changes in entry-level changelogs.
+10. Use `CHANGELOG.md` for repository-level changes.
 
 ## Working with Obsidian
 
@@ -97,6 +113,8 @@ See `llm-instructions.md` and `docs/LLM_safety_model.md`.
 
 ## Key documentation
 
+- `docs/Safe_research_ingestion_MVP.md` defines the minimum safe-ingestion workflow for the current SEND pathway-planning worked example.
+- `docs/Object_change_logs.md` defines when object-level changelogs are required and when Git/PR history is enough.
 - `SCHEMA.md` defines object types, required fields and controlled values.
 - `GOVERNANCE.md` defines repository governance and review responsibilities.
 - `CONTRIBUTING.md` defines how to add and update material safely.
