@@ -1,0 +1,1 @@
+This temporary file checks that the refreshed GitHub connector can write to the renamed repository.
