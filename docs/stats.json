@@ -1,0 +1,104 @@
+{
+  "generated_at": "2026-06-09T20:56:05.680Z",
+  "generated_from": "Repository markdown files in numbered knowledge-object folders",
+  "scope_note": "Counts are generated from repository folders and frontmatter where available. Missing metadata is counted explicitly rather than inferred as reviewed or validated.",
+  "totals": {
+    "service_areas": 0,
+    "repository_areas": 9,
+    "knowledge_layers": 3,
+    "markdown_objects": 21,
+    "research_studies": 6,
+    "evidence": 4,
+    "user_needs": 4,
+    "civic_needs": 0,
+    "behaviours": 2,
+    "pain_points": 1,
+    "insights": 2,
+    "themes": 1,
+    "personas": 1,
+    "journeys": 0,
+    "other_markdown_objects": 0
+  },
+  "service_areas": [],
+  "repository_areas": [
+    {
+      "key": "research_studies",
+      "label": "Research studies",
+      "dir": "001_Research_studies",
+      "count": 6,
+      "exists": true
+    },
+    {
+      "key": "evidence",
+      "label": "Evidence items",
+      "dir": "002_Evidence",
+      "count": 4,
+      "exists": true
+    },
+    {
+      "key": "needs",
+      "label": "Needs",
+      "dir": "003_User_needs",
+      "count": 4,
+      "exists": true
+    },
+    {
+      "key": "behaviours",
+      "label": "Behaviours",
+      "dir": "004_Behaviours",
+      "count": 2,
+      "exists": true
+    },
+    {
+      "key": "pain_points",
+      "label": "Pain points",
+      "dir": "005_Pain_point",
+      "count": 1,
+      "exists": true
+    },
+    {
+      "key": "insights",
+      "label": "Insights",
+      "dir": "006_Insights",
+      "count": 2,
+      "exists": true
+    },
+    {
+      "key": "themes",
+      "label": "Themes",
+      "dir": "007_Themes",
+      "count": 1,
+      "exists": true
+    },
+    {
+      "key": "personas",
+      "label": "Personas or archetypes",
+      "dir": "008_Personas",
+      "count": 1,
+      "exists": true
+    },
+    {
+      "key": "journeys",
+      "label": "Journeys",
+      "dir": "009_Journeys",
+      "count": 0,
+      "exists": false
+    }
+  ],
+  "by_status": {
+    "captured": 21
+  },
+  "by_lifecycle_state": {
+    "No lifecycle metadata": 21
+  },
+  "by_evidence_strength": {
+    "No evidence-strength metadata": 8,
+    "high": 5,
+    "low": 6,
+    "medium": 1,
+    "none": 1
+  },
+  "warnings": [
+    "009_Journeys was not found, so its count is zero."
+  ]
+}
