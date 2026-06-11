@@ -8,13 +8,28 @@ date_range: 2024-11
 method: Semi structured online focus groups
 participants: One group of young people (age 12-22), three groups of parents of young people being educated in different settings
 setting: Online groups, Essex
+source_context:
+  geographic_scope: local
+  primary_locale: Essex
+  locales:
+    - Essex
+  institution_scope: community_research
+  source_type: primary_research
+  commissioning_or_source_body:
+applicability:
+  transferability: plausible_cross_context
+  limits:
+    - Evidence is from online groups in the Essex SEND pathway context.
+    - Recruitment through local channels may shape who was represented.
+    - Differences by educational setting may depend partly on local provision and school context.
+  notes: Essex-local evidence from young people and parents. Findings may point to wider SEND pathway patterns, but should be compared with evidence from other places before being treated as supported cross-context.
 status: captured
 analysis_state: captured
 confidence: high
 creation_mode: migrated
 llm_generated: false
 human_reviewed: false
-review_status: not_reviewed
+review_status: needs_review
 related_evidence:
 related_insights:
 tags:
