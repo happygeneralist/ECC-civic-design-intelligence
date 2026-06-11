@@ -8,12 +8,25 @@ date_range: 2024-03 – 2024-05
 method: Semi-structured interviews
 participants: 10 parents of children with SEND (ages 5–11)
 setting: In-home interviews, South London
+source_context:
+  geographic_scope: unclear
+  primary_locale:
+  locales:
+  institution_scope: unclear
+  source_type: primary_research
+  commissioning_or_source_body:
+applicability:
+  transferability: unclear
+  limits:
+    - Method, setting, sample and title appear inconsistent and need review before reuse.
+    - Current frontmatter says semi-structured interviews in South London, while the method summary says online survey with approximately 150 completes.
+  notes: Do not use this study for cross-context claims until the source metadata has been clarified.
 status: captured
 analysis_state: captured
 creation_mode: migrated
 llm_generated: false
 human_reviewed: false
-review_status: not_reviewed
+review_status: needs_review
 related_evidence:
   - EVID_001
   - EVID_002
