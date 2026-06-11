@@ -173,6 +173,51 @@
       background: var(--panel);
     }
 
+    .impact-panel {
+      margin-top: 28px;
+      padding: 28px;
+      border-left: 8px solid var(--green);
+      background: var(--accent-light);
+    }
+
+    .impact-panel p {
+      max-width: 840px;
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .impact-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px 28px;
+      margin: 24px 0 0;
+      padding-left: 22px;
+    }
+
+    .ai-callout {
+      margin-top: 28px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-top: 8px solid var(--button);
+      background: var(--panel);
+    }
+
+    .ai-callout__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, .8fr);
+      gap: 32px;
+      align-items: start;
+    }
+
+    .ai-callout p {
+      margin-top: 0;
+    }
+
+    .ai-callout ul {
+      margin: 0;
+      padding-left: 22px;
+    }
+
     .stats-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -257,7 +302,9 @@
     @media (max-width: 850px) {
       .hero__grid,
       .grid,
-      .stats-grid {
+      .stats-grid,
+      .ai-callout__grid,
+      .impact-list {
         grid-template-columns: 1fr;
       }
 
@@ -312,39 +359,32 @@
       </div>
 
       <h2>Why it matters</h2>
-      <p class="lead">Public services need better outcomes, not just better documentation. Civic design intelligence helps teams understand what people need, where systems create burden, and which decisions are most likely to improve public value.</p>
-
-      <div class="grid">
-        <article class="card">
-          <h3>Improve outcomes</h3>
-          <p>Connect evidence and lived experience to the outcomes services are trying to change, so work is guided by impact rather than assumptions or organisational habit.</p>
-        </article>
-        <article class="card">
-          <h3>Focus effort</h3>
-          <p>Make it easier to see where needs are unsupported, where pain blocks value, and where policy or service attention could make the greatest difference.</p>
-        </article>
-        <article class="card">
-          <h3>Build accountability</h3>
-          <p>Create an auditable link between what is known, what is contested and what decisions are made, so public-service learning can compound over time.</p>
-        </article>
+      <div class="impact-panel">
+        <p>Public services need better outcomes, not just better documentation. Civic design intelligence helps teams connect evidence, lived experience and operational knowledge to the outcomes they are trying to improve.</p>
+        <ul class="impact-list">
+          <li>See where needs are unsupported.</li>
+          <li>Find where pain blocks public value.</li>
+          <li>Challenge decisions made without enough evidence.</li>
+          <li>Focus policy and service attention where it can create greater impact.</li>
+        </ul>
       </div>
 
       <h2>How AI enables it</h2>
-      <p class="lead">AI makes this approach practical. Public-service knowledge is usually spread across research reports, lived experience, complaints, policy documents and operational data. AI can help structure and connect that material at pace, while the repository keeps the work governed, traceable and reviewable.</p>
-
-      <div class="grid">
-        <article class="card">
-          <h3>Structure messy evidence</h3>
-          <p>AI helps turn varied source material into linked evidence, needs, behaviours, pain points and insights without making AI the source of truth.</p>
-        </article>
-        <article class="card">
-          <h3>Keep knowledge governed</h3>
-          <p>Objects keep their status, evidence basis, uncertainty and review state visible, so useful AI support does not become unmanaged synthesis.</p>
-        </article>
-        <article class="card">
-          <h3>Keep people accountable</h3>
-          <p>AI can help structure and test understanding, but people remain responsible for interpretation, validation and public-service decisions.</p>
-        </article>
+      <div class="ai-callout">
+        <div class="ai-callout__grid">
+          <div>
+            <p class="lead">AI makes this approach practical. Public-service knowledge is usually spread across research reports, lived experience, complaints, policy documents and operational data.</p>
+            <p>AI can help structure and connect that material at pace, while the repository keeps the work governed, traceable and reviewable.</p>
+          </div>
+          <div>
+            <h3>Responsible by design</h3>
+            <ul>
+              <li>AI helps with structure and connection.</li>
+              <li>Knowledge objects keep evidence and uncertainty visible.</li>
+              <li>People remain responsible for interpretation, validation and decisions.</li>
+            </ul>
+          </div>
+        </div>
       </div>
 
       <h2>Repository snapshot</h2>
