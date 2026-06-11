@@ -1,6 +1,8 @@
-# ECC Civic design intelligence system
+# Civic design intelligence system
 
 This repository is an Obsidian-compatible civic design intelligence system for SEND-related service design, policy and decision-support work.
+
+The current worked example is based on SEND pathway-planning research in Essex. Essex should be treated as the first locale for testing the repository model, not as the boundary of the system. Most needs, pain points, behaviours, insights and civic questions should be captured at the highest useful level, with local context added where it materially affects interpretation, evidence, delivery or decision-making.
 
 It is intended to help researchers, designers, product/service teams and decision-makers capture anonymised evidence, connect it to user needs, civic needs, behaviours, pain points, insights, value dimensions and solution assessments, and maintain a clear audit trail for how research knowledge develops over time.
 
@@ -20,6 +22,14 @@ The repository should separate:
 - decision records and design histories that reference those objects
 
 External insight should strengthen the system without directly overwriting the canonical layer. Contributions from families, residents, third-sector organisations, advocates, professionals, public reports, inspections and academic studies should be treated as valuable evidence inputs that can support, challenge, refine or supersede existing knowledge objects.
+
+## Locales and local context
+
+The system should be able to support localised evidence and decisions without turning every knowledge object into a local-only object.
+
+Use locale metadata when local context changes how an object should be interpreted, for example because of local policy, operational constraints, demographic context, commissioning arrangements, service configuration or evidence source.
+
+Do not localise objects by default. Where a need, pain point, behaviour or insight is likely to apply across places, capture it at the highest useful level and link local evidence to it. Local variants can be created later where evidence shows that the local context materially changes the meaning, risk, priority or response.
 
 ## What this repository is for
 
@@ -90,7 +100,7 @@ The repository distinguishes between:
 
 ## Current MVP focus
 
-The immediate MVP is safe ingestion of a small SEND pathway-planning research sample.
+The immediate MVP is safe ingestion of a small SEND pathway-planning research sample, using Essex as the first locale and worked context.
 
 Use `docs/Safe_research_ingestion_MVP.md` before breaking research into structured objects. It defines the minimum conventions for creating evidence, behaviours, pain points, user needs, civic needs, insights and themes without making immature knowledge look settled.
 

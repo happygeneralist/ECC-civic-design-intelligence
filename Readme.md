@@ -1,6 +1,8 @@
-# ECC Research Repository
+# Civic design intelligence system
 
-This repository is an Obsidian-compatible research and insights repository for SEND-related service design, policy and decision-support work.
+This repository is an Obsidian-compatible research and insights repository for public-service design, policy and decision-support work.
+
+The current worked example is SEND pathway planning, using Essex as the first locale and worked context. Essex should not be treated as the boundary of the system. Most needs, pain points, behaviours and insights should be captured at the highest useful level, with local context added where it materially affects interpretation, evidence, delivery or decision-making.
 
 It is intended to help researchers, designers, product/service teams and decision-makers capture anonymised evidence, connect it to user needs, behaviours, pain points, insights, value dimensions and solution assessments, and maintain a clear audit trail for how research knowledge develops over time.
 
@@ -13,6 +15,7 @@ Use this repository to store and work with:
 - research study summaries
 - anonymised evidence, quotes, observations and data points
 - user needs
+- civic needs
 - behaviours
 - pain points
 - insights
@@ -43,7 +46,7 @@ Do not store:
 ```text
 001_Research_studies/   Research activities and study summaries
 002_Evidence/           Anonymised quotes, observations and data points
-003_User_needs/         User needs and need summaries
+003_User_needs/         User needs and civic needs during the MVP phase
 004_Behaviours/         Observed or inferred behaviours
 005_Pain_point/         Pain points and barriers
 006_Insights/           Draft, reviewed and validated insights
@@ -61,6 +64,7 @@ Every meaningful claim should be traceable to evidence, or clearly marked as an 
 The repository distinguishes between:
 
 - captured evidence
+- submitted or candidate knowledge
 - draft synthesis
 - assumptions
 - reviewed analysis
@@ -69,38 +73,20 @@ The repository distinguishes between:
 - solution options and recommendations
 - deprecated or superseded material
 
+## Locales and local context
+
+The system should be able to support localised evidence and decisions without turning every knowledge object into a local-only object.
+
+Use locale metadata when local context changes how an object should be interpreted, for example because of local policy, operational constraints, demographic context, commissioning arrangements, service configuration or evidence source.
+
+Do not localise objects by default. Where a need, pain point, behaviour or insight is likely to apply across places, capture it at the highest useful level and link local evidence to it.
+
 ## How to use this repository
 
 1. Capture anonymised evidence in `002_Evidence/`.
 2. Link evidence to studies, actors, journey stages and tags.
-3. Code evidence into user needs, behaviours and pain points.
+3. Code evidence into user needs, civic needs, behaviours and pain points.
 4. Draft insights from linked evidence.
 5. Connect needs and insights to value dimensions where useful.
 6. Assess solution options against needs, value, evidence, risks and assumptions.
 7. Review assumptions, evidence basis and confidence.
-8. Promote reviewed work to validated status only when the evidence supports it.
-9. Record meaningful changes in both entry-level changelogs and the global `CHANGELOG.md`.
-
-## Working with Obsidian
-
-This repository is designed to work as an Obsidian vault. Use links, backlinks, properties and Dataview queries to navigate between evidence, needs, behaviours, insights, value dimensions and solution assessments.
-
-See `docs/Obsidian_workflow.md` for the recommended workflow.
-
-## Working with LLMs
-
-LLMs may be used to help classify, link, summarise and draft research material, but they must not be treated as evidence.
-
-LLMs must not mark anything as validated, upgrade evidence strength, remove caveats or materially change validated research claims without human review.
-
-See `llm-instructions.md` and `docs/LLM_safety_model.md`.
-
-## Key documentation
-
-- `SCHEMA.md` defines object types, required fields and controlled values.
-- `GOVERNANCE.md` defines repository governance and review responsibilities.
-- `CONTRIBUTING.md` defines how to add and update material safely.
-- `CHANGELOG.md` records repository-level changes.
-- `docs/Evidence_standards.md` defines what counts as evidence.
-- `docs/Review_process.md` defines review and validation steps.
-- `docs/Value_and_decision_evidence.md` defines how value, solution assessment and decision evidence are handled.
