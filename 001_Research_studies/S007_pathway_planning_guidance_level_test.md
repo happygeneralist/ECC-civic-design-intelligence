@@ -23,7 +23,8 @@ applicability:
     - Date range is not stated in the source.
     - The source identifies actor groups but does not provide detailed sample composition.
     - Findings should not be inferred from this entry; a separate outcomes or learning entry is expected.
-  notes: Use this study entry as source context for the initial pathway-planning experiment design. Do not use it as evidence of participant findings until outcome evidence is captured separately.
+    - A later user-supplied p3 parent/carer extract has been added as an evidence summary, but should be checked against the original source before promotion.
+  notes: Use this study entry as source context for the initial pathway-planning experiment design. Do not use the design-history source alone as evidence of participant findings. Use linked evidence summaries cautiously until original source material has been reviewed.
 status: captured
 analysis_state: captured
 confidence: low
@@ -32,6 +33,7 @@ llm_generated: true
 human_reviewed: false
 review_status: needs_review
 related_evidence:
+  - "[[EVID_004]]"
 related_insights:
 tags:
   - send
@@ -72,6 +74,8 @@ The source appears local to the Essex SEND pathway-planning work, but the partic
 This entry should be used to understand the experiment design, research intent, hypothesis, method and intended evidence. It should not be used as evidence of findings, outcomes or validated user needs.
 
 Transferability is marked as `unclear` because the source captures experiment design rather than outcomes, and because participant count and sample detail are not stated.
+
+A later user-supplied p3 parent/carer extract has been added as [[EVID_004]]. That evidence summary should be treated cautiously until checked against the original source material.
 
 ## Participant or actor groups
 
@@ -135,11 +139,26 @@ Success was not defined as selecting a single winning proposition.
 
 Not captured in this entry.
 
-The source explicitly documents experiment design and intent, not outcomes. Do not infer findings from this entry.
+The design-history source explicitly documents experiment design and intent, not outcomes. Do not infer findings from that source alone.
+
+A user-supplied p3 parent/carer extract has been captured separately as [[EVID_004]] and linked to draft user needs. Those needs remain `needs_review`.
 
 ## Related evidence
 
-- Evidence notes: TBC
+- Evidence notes: [[EVID_004]]
+
+## Related draft user needs
+
+- [[UN_002]] Begin planning before key education choices become fixed
+- [[UN_003]] Understand realistic options for the young person's circumstances
+- [[UN_004]] Identify viable routes if expected grades are not achieved
+- [[UN_005]] Make decisions from an accurate view of the young person
+- [[UN_006]] Involve people who know the young person well
+- [[UN_007]] Reconcile pathway information from different sources
+- [[UN_008]] Assess whether pathway options are workable in daily life
+- [[UN_009]] Revisit pathway decisions after they have started
+- [[UN_010]] Consider the important steps, rights and adjustments
+- [[UN_011]] Recognise the young person as an individual
 
 ## Limitations
 
@@ -147,8 +166,8 @@ The source explicitly documents experiment design and intent, not outcomes. Do n
 - Date range is TBC.
 - Research lead is TBC.
 - Detailed sample composition is not stated.
-- This entry captures intended evidence and experiment design, not findings.
-- Outcome evidence should be captured separately before creating evidence-derived needs, pain points, behaviours or insights from this experiment.
+- This study entry captures intended evidence and experiment design from the design-history source.
+- [[EVID_004]] captures a later user-supplied evidence summary and should be checked against original source material before any linked needs are promoted.
 
 ## Review notes
 
@@ -159,3 +178,4 @@ The source explicitly documents experiment design and intent, not outcomes. Do n
 ## Changelog
 
 - 2026-06-12: Created as research study summary from the Essex SEND design-history entry for the initial pathway-planning guidance level test. Status: captured. Analysis state: captured. Review status: needs_review. Missing participant count, date range and research lead marked as unknown or TBC rather than inferred.
+- 2026-06-12: Linked [[EVID_004]] and related draft user needs [[UN_002]] to [[UN_011]]. Study remains captured and needs_review. This update does not mark any findings, evidence or needs as reviewed or validated.
