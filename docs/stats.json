@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-06-12T06:57:29.218Z",
+  "generated_at": "2026-06-12T12:27:48.297Z",
   "generated_from": "Repository markdown files in numbered knowledge-object folders",
   "scope_note": "Counts are generated from repository folders and frontmatter where available. Missing metadata is counted explicitly rather than inferred as reviewed or validated.",
   "totals": {
     "service_areas": 0,
     "repository_areas": 9,
     "knowledge_layers": 3,
-    "markdown_objects": 21,
-    "research_studies": 6,
-    "evidence": 4,
-    "user_needs": 4,
+    "markdown_objects": 33,
+    "research_studies": 7,
+    "evidence": 5,
+    "user_needs": 14,
     "civic_needs": 0,
     "behaviours": 2,
     "pain_points": 1,
@@ -25,21 +25,21 @@
       "key": "research_studies",
       "label": "Research studies",
       "dir": "001_Research_studies",
-      "count": 6,
+      "count": 7,
       "exists": true
     },
     {
       "key": "evidence",
       "label": "Evidence items",
       "dir": "002_Evidence",
-      "count": 4,
+      "count": 5,
       "exists": true
     },
     {
       "key": "needs",
       "label": "Needs",
       "dir": "003_User_needs",
-      "count": 4,
+      "count": 14,
       "exists": true
     },
     {
@@ -86,15 +86,17 @@
     }
   ],
   "by_status": {
-    "captured": 21
+    "captured": 23,
+    "draft": 10
   },
   "by_lifecycle_state": {
-    "No lifecycle metadata": 21
+    "No lifecycle metadata": 33
   },
   "by_evidence_strength": {
     "No evidence-strength metadata": 8,
     "high": 5,
-    "low": 6,
+    "low": 8,
+    "weak": 10,
     "medium": 1,
     "none": 1
   },
