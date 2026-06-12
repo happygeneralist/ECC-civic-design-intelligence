@@ -1,12 +1,12 @@
 ---
 type: user_need
-id: UN_004
+id: UN_014
 actor: Parent/carer of a young person with SEND
 journey_stage: Pathway_planning
 need: A parent/carer of a young person with SEND needs to identify viable post-16 routes if expected grades are not achieved, so they can plan a credible next step.
 need_level: task
 parent_needs:
-  - "[[UN_003]]"
+  - "[[UN_013]]"
 child_needs:
 related_capabilities:
   - agency
@@ -31,7 +31,7 @@ change_level: none
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_004]]"
+  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -56,7 +56,7 @@ The wording reframes the evidence as an action-oriented need: identifying viable
 
 ## Evidence basis
 
-- Supporting evidence: [[EVID_004]]
+- Supporting evidence: [[EVID_005]]
 - Contextual evidence: [[RS_007]]
 - Contradictory or limiting evidence:
 
@@ -66,7 +66,7 @@ The evidence suggests that pathway planning is not credible if families do not k
 
 ## Need hierarchy
 
-- Parent needs: [[UN_003]]
+- Parent needs: [[UN_013]]
 - Child needs:
 - Related capabilities: agency; interpretability
 - Related civic needs:
@@ -94,4 +94,5 @@ The evidence suggests that pathway planning is not credible if families do not k
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_004]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+- 2026-06-12: Renumbered from `UN_004` to `UN_014` to avoid collision with existing `UN_004.md`.
