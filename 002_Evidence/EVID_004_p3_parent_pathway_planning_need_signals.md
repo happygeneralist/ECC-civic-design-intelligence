@@ -1,6 +1,6 @@
 ---
 type: evidence
-id: EVID_004
+id: EVID_005
 source_study: "[[RS_007]]"
 evidence_kind: document_extract
 actor: Parent/carer
@@ -18,9 +18,9 @@ llm_generated: true
 human_reviewed: false
 review_status: needs_review
 related_needs:
-  - "[[UN_002]]"
-  - "[[UN_003]]"
-  - "[[UN_004]]"
+  - "[[UN_012]]"
+  - "[[UN_013]]"
+  - "[[UN_014]]"
   - "[[UN_005]]"
   - "[[UN_006]]"
   - "[[UN_007]]"
@@ -73,7 +73,7 @@ Because the original transcript is not present in the repository and anonymisati
 
 ## Related objects
 
-- User needs: [[UN_002]], [[UN_003]], [[UN_004]], [[UN_005]], [[UN_006]], [[UN_007]], [[UN_008]], [[UN_009]], [[UN_010]], [[UN_011]]
+- User needs: [[UN_012]], [[UN_013]], [[UN_014]], [[UN_005]], [[UN_006]], [[UN_007]], [[UN_008]], [[UN_009]], [[UN_010]], [[UN_011]]
 - Behaviours:
 - Pain points:
 - Insights:
@@ -87,3 +87,4 @@ No direct names were included in the supplied extract. The note includes referen
 ## Changelog
 
 - 2026-06-12: Created as evidence summary from a user-supplied anonymised parent/carer extract for the initial pathway-planning guidance level test. Status: captured. Review status: needs_review. Confidence: low. Original transcript not present in repository.
+- 2026-06-12: Renumbered from `EVID_004` to `EVID_005` to avoid collision with existing `EVID_DATA_001`.
