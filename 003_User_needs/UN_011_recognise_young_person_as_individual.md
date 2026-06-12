@@ -33,7 +33,7 @@ change_level: none
 supersedes:
 superseded_by:
 related_evidence:
-  - "[[EVID_004]]"
+  - "[[EVID_005]]"
 related_behaviours:
 related_pain_points:
 related_insights:
@@ -60,7 +60,7 @@ This is marked high sensitivity because small wording changes could remove the d
 
 ## Evidence basis
 
-- Supporting evidence: [[EVID_004]]
+- Supporting evidence: [[EVID_005]]
 - Contextual evidence: [[RS_007]]
 - Contradictory or limiting evidence:
 
@@ -98,4 +98,5 @@ The evidence suggests that parent/carers may need professionals and services to 
 
 ## Changelog
 
-- 2026-06-12: Created as draft user need from [[EVID_004]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+- 2026-06-12: Created as draft user need from [[EVID_005]]. Status: draft. Analysis state: evidence_linked. Evidence strength: weak. Review status: needs_review.
+- 2026-06-12: Updated evidence link from [[EVID_004]] to [[EVID_005]] after renumbering the new evidence summary to avoid duplicate IDs.
