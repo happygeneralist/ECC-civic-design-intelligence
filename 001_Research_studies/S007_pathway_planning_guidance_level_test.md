@@ -33,7 +33,7 @@ llm_generated: true
 human_reviewed: false
 review_status: needs_review
 related_evidence:
-  - "[[EVID_004]]"
+  - "[[EVID_005]]"
 related_insights:
 tags:
   - send
@@ -75,7 +75,7 @@ This entry should be used to understand the experiment design, research intent, 
 
 Transferability is marked as `unclear` because the source captures experiment design rather than outcomes, and because participant count and sample detail are not stated.
 
-A later user-supplied p3 parent/carer extract has been added as [[EVID_004]]. That evidence summary should be treated cautiously until checked against the original source material.
+A later user-supplied p3 parent/carer extract has been added as [[EVID_005]]. That evidence summary should be treated cautiously until checked against the original source material.
 
 ## Participant or actor groups
 
@@ -141,17 +141,17 @@ Not captured in this entry.
 
 The design-history source explicitly documents experiment design and intent, not outcomes. Do not infer findings from that source alone.
 
-A user-supplied p3 parent/carer extract has been captured separately as [[EVID_004]] and linked to draft user needs. Those needs remain `needs_review`.
+A user-supplied p3 parent/carer extract has been captured separately as [[EVID_005]] and linked to draft user needs. Those needs remain `needs_review`.
 
 ## Related evidence
 
-- Evidence notes: [[EVID_004]]
+- Evidence notes: [[EVID_005]]
 
 ## Related draft user needs
 
-- [[UN_002]] Begin planning before key education choices become fixed
-- [[UN_003]] Understand realistic options for the young person's circumstances
-- [[UN_004]] Identify viable routes if expected grades are not achieved
+- [[UN_012]] Begin planning before key education choices become fixed
+- [[UN_013]] Understand realistic options for the young person's circumstances
+- [[UN_014]] Identify viable routes if expected grades are not achieved
 - [[UN_005]] Make decisions from an accurate view of the young person
 - [[UN_006]] Involve people who know the young person well
 - [[UN_007]] Reconcile pathway information from different sources
@@ -167,7 +167,7 @@ A user-supplied p3 parent/carer extract has been captured separately as [[EVID_0
 - Research lead is TBC.
 - Detailed sample composition is not stated.
 - This study entry captures intended evidence and experiment design from the design-history source.
-- [[EVID_004]] captures a later user-supplied evidence summary and should be checked against original source material before any linked needs are promoted.
+- [[EVID_005]] captures a later user-supplied evidence summary and should be checked against original source material before any linked needs are promoted.
 
 ## Review notes
 
@@ -179,3 +179,4 @@ A user-supplied p3 parent/carer extract has been captured separately as [[EVID_0
 
 - 2026-06-12: Created as research study summary from the Essex SEND design-history entry for the initial pathway-planning guidance level test. Status: captured. Analysis state: captured. Review status: needs_review. Missing participant count, date range and research lead marked as unknown or TBC rather than inferred.
 - 2026-06-12: Linked [[EVID_004]] and related draft user needs [[UN_002]] to [[UN_011]]. Study remains captured and needs_review. This update does not mark any findings, evidence or needs as reviewed or validated.
+- 2026-06-12: Updated links after renumbering new PR objects to [[EVID_005]], [[UN_012]], [[UN_013]] and [[UN_014]] to avoid duplicate IDs.
