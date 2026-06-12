@@ -29,6 +29,12 @@ related_needs:
   - "[[UN_010]]"
   - "[[UN_011]]"
 related_behaviours:
+  - "[[BEH_003]]"
+  - "[[BEH_004]]"
+  - "[[BEH_005]]"
+  - "[[BEH_006]]"
+  - "[[BEH_007]]"
+  - "[[BEH_008]]"
 related_pain_points:
 related_insights:
 tags:
@@ -74,7 +80,7 @@ Because the original transcript is not present in the repository and anonymisati
 ## Related objects
 
 - User needs: [[UN_012]], [[UN_013]], [[UN_014]], [[UN_005]], [[UN_006]], [[UN_007]], [[UN_008]], [[UN_009]], [[UN_010]], [[UN_011]]
-- Behaviours:
+- Behaviours: [[BEH_003]], [[BEH_004]], [[BEH_005]], [[BEH_006]], [[BEH_007]], [[BEH_008]]
 - Pain points:
 - Insights:
 
@@ -88,3 +94,4 @@ No direct names were included in the supplied extract. The note includes referen
 
 - 2026-06-12: Created as evidence summary from a user-supplied anonymised parent/carer extract for the initial pathway-planning guidance level test. Status: captured. Review status: needs_review. Confidence: low. Original transcript not present in repository.
 - 2026-06-12: Renumbered from `EVID_004` to `EVID_005` to avoid collision with existing `EVID_DATA_001`.
+- 2026-06-12: Linked initial prioritised behaviour set [[BEH_003]] to [[BEH_008]]. Evidence remains captured and needs_review.
