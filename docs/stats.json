@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-06-12T12:27:48.297Z",
+  "generated_at": "2026-06-12T13:03:57.739Z",
   "generated_from": "Repository markdown files in numbered knowledge-object folders",
   "scope_note": "Counts are generated from repository folders and frontmatter where available. Missing metadata is counted explicitly rather than inferred as reviewed or validated.",
   "totals": {
     "service_areas": 0,
     "repository_areas": 9,
     "knowledge_layers": 3,
-    "markdown_objects": 33,
+    "markdown_objects": 39,
     "research_studies": 7,
     "evidence": 5,
     "user_needs": 14,
     "civic_needs": 0,
-    "behaviours": 2,
+    "behaviours": 8,
     "pain_points": 1,
     "insights": 2,
     "themes": 1,
@@ -46,7 +46,7 @@
       "key": "behaviours",
       "label": "Behaviours",
       "dir": "004_Behaviours",
-      "count": 2,
+      "count": 8,
       "exists": true
     },
     {
@@ -87,16 +87,16 @@
   ],
   "by_status": {
     "captured": 23,
-    "draft": 10
+    "draft": 16
   },
   "by_lifecycle_state": {
-    "No lifecycle metadata": 33
+    "No lifecycle metadata": 39
   },
   "by_evidence_strength": {
     "No evidence-strength metadata": 8,
     "high": 5,
     "low": 8,
-    "weak": 10,
+    "weak": 16,
     "medium": 1,
     "none": 1
   },
